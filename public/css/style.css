@@ -1,0 +1,921 @@
+*{
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+
+
+@font-face {
+    font-family: 'Yekan';
+    src: url('../fonts/Yekan.eot') format('eot'),
+    url('../fonts/Yekan.woff') format('woff'),
+    url('../fonts/Yekan.ttf') format('ttf');
+}
+
+
+@font-face {
+    font-family: 'Sahel-Bold';
+    src: url('../fonts/Sahel-Bold.eot') format('eot'),
+    url('../fonts/Sahel-Bold.woff') format('woff'),
+    url('../fonts/Sahel-Bold.ttf') format('ttf');
+}
+
+
+body{
+    background-color: #070e1c;
+}
+
+
+
+.image-intro{
+    position: relative;
+    height: 515px;
+}
+
+
+
+.image{
+    position: absolute;
+}
+
+
+
+.search{
+    height: 35px;
+    position: relative;
+}
+
+
+.input{
+    width: 0;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    padding-right: 50px;
+    font-size: 16px;
+    font-family: yekan;
+    outline: none;
+    transition: width 1s ease;
+}
+
+
+
+.docme{
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.search.active input {
+    width: 300px;
+    background-color: #a04cff;
+    margin-left: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.search.active .zarebin{
+    margin-top: 0;
+    margin-right: 25px;
+}
+
+
+
+.zarebin{
+    margin-top: -4px;
+}
+
+
+
+@media (max-width: 454px){
+    .font-category{
+        font-size: 17px !important;
+    }
+}
+
+
+
+.box-ax-category{
+    width: 130px;
+    min-height: 120px;
+    background-color: transparent;
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+
+
+.box-categories{
+    width: 100%;
+    background-image: url("../img/background-category.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+@media (max-width: 454px){
+    .box-ax-category{
+        width: 100%;
+    }
+}
+
+
+
+
+
+.box-bestSellers{
+    width: 98%;
+    min-height: 150px;
+    background-color: transparent;
+    margin: auto;
+}
+
+
+
+.box-forush{
+    width: 32%;
+    height: 130px;
+    background-color: #1c2235;
+    margin-top: 13px;
+    float: right;
+    margin-right: 11px;
+    border-radius: 10px;
+}
+
+
+
+.ax-game{
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    float: right;
+    border-radius: 10px;
+}
+
+
+
+.title-game{
+    width: 230px;
+    padding: 1px 0;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 11px;
+    font-size: 16px;
+    font-family: Yekan;
+    color: white;
+}
+
+
+
+.box-price{
+    width: 230px;
+    height: 30px;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 13px;
+    color: white;
+}
+
+
+
+.price-game{
+    width: 100px;
+    padding: 2px 0;
+    background-color: transparent;
+    float: right;
+    font-size: 15px;
+    font-family: Yekan;
+    text-decoration: line-through;
+}
+
+
+.discount-game{
+    width: 100px;
+    padding: 2px 0;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    font-size: 15px;
+    font-family: Yekan;
+    color: white;
+}
+
+
+
+.name-system{
+    width: 230px;
+    padding: 1px 0;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: Yekan;
+    color: white;
+}
+
+
+
+
+
+@media (max-width: 454px){
+    .box-bestSellers{
+        width: 100%;
+        min-height: 650px;
+        background-color: transparent;
+        margin: auto;
+    }
+
+
+    .box-forush{
+        width: 100%;
+        min-height: 130px;
+        background-color: #1c2235;
+        float: none;
+        margin: auto;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+
+
+
+    .ax-game{
+        width: 33%;
+        min-height: 130px;
+        background-color: white;
+        float: right;
+        border-radius: 10px;
+    }
+
+
+    .title-game{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 11px;
+        font-size: 16px;
+        font-family: Yekan;
+    }
+
+
+    .box-price{
+        width: 60%;
+        min-height: 30px;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 13px;
+    }
+
+
+
+    .price-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        font-size: 13px;
+        font-family: Yekan;
+        text-decoration: line-through;
+    }
+
+
+    .discount-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        font-size: 13px;
+        font-family: Yekan;
+    }
+
+
+
+    .name-system{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: Yekan;
+    }
+
+}
+
+
+
+
+@media (min-width: 455px) and (max-width: 700px){
+    .box-bestSellers{
+        width: 100%;
+        min-height: 650px;
+        background-color: transparent;
+        margin: auto;
+    }
+
+
+    .box-forush{
+        width: 100%;
+        min-height: 130px;
+        background-color: #1c2235;
+        float: none;
+        margin: auto;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+
+
+
+    .ax-game{
+        width: 25%;
+        min-height: 130px;
+        background-color: white;
+        float: right;
+        border-radius: 10px;
+    }
+
+
+    .title-game{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 11px;
+        font-size: 16px;
+        font-family: Yekan;
+    }
+
+
+    .box-price{
+        width: 60%;
+        min-height: 30px;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 13px;
+    }
+
+
+
+    .price-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        font-size: 13px;
+        font-family: Yekan;
+        text-decoration: line-through;
+    }
+
+
+    .discount-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        font-size: 13px;
+        font-family: Yekan;
+    }
+
+
+
+    .name-system{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: Yekan;
+    }
+}
+
+
+
+
+
+@media (min-width: 701px) and (max-width: 900px){
+    .box-bestSellers{
+        width: 100%;
+        min-height: 650px;
+        background-color: transparent;
+        margin: auto;
+    }
+
+
+    .box-forush{
+        width: 100%;
+        min-height: 130px;
+        background-color: #1c2235;
+        float: none;
+        margin: auto;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+
+
+
+    .ax-game{
+        width: 25%;
+        min-height: 130px;
+        background-color: white;
+        float: right;
+        border-radius: 10px;
+    }
+
+
+    .title-game{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 11px;
+        font-size: 16px;
+        font-family: Yekan;
+    }
+
+
+    .box-price{
+        width: 60%;
+        min-height: 30px;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 13px;
+    }
+
+
+
+    .price-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        font-size: 13px;
+        font-family: Yekan;
+        text-decoration: line-through;
+    }
+
+
+    .discount-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        font-size: 13px;
+        font-family: Yekan;
+    }
+
+
+
+    .name-system{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: Yekan;
+    }
+}
+
+
+
+
+
+@media (min-width: 901px) and (max-width: 1230px){
+    .box-bestSellers{
+        width: 100%;
+        min-height: 650px;
+        background-color: transparent;
+        margin: auto;
+    }
+
+
+    .box-forush{
+        width: 100%;
+        min-height: 130px;
+        background-color: #1c2235;
+        float: none;
+        margin: auto;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+
+
+
+    .ax-game{
+        width: 18%;
+        min-height: 130px;
+        background-color: white;
+        float: right;
+        border-radius: 10px;
+    }
+
+
+    .title-game{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 11px;
+        font-size: 16px;
+        font-family: Yekan;
+    }
+
+
+    .box-price{
+        width: 60%;
+        min-height: 30px;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 13px;
+    }
+
+
+
+    .price-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        font-size: 13px;
+        font-family: Yekan;
+        text-decoration: line-through;
+    }
+
+
+    .discount-game{
+        width: 45%;
+        padding: 2px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        font-size: 13px;
+        font-family: Yekan;
+    }
+
+
+
+    .name-system{
+        width: 60%;
+        padding: 1px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: Yekan;
+    }
+}
+
+
+
+
+
+.animation-image{
+    animation: my-first 4s infinite;
+}
+
+
+@keyframes my-first {
+    10%{margin-left: 100px}
+    30%{margin-left: 130px;margin-top: 50px}
+    50%{margin-top: 0;margin-left: 10px}
+    70%{margin-top: -10px;margin-left: 0}
+    90%{margin-bottom: 50px;margin-left: -120px}
+    100%{margin-left: 0;margin-top: 0;margin-bottom: 0}
+}
+
+
+
+.animation-zare{
+    animation: animate-image 4s infinite;
+}
+
+
+@keyframes animate-image {
+    10%{margin-left: 20px}
+    50%{margin-left: 50px;margin-top: 30px}
+    100%{margin-left: 20px}
+}
+
+
+
+
+
+
+.banner-categories{
+    width: 100%;
+    height: 250px;
+    background-color: darkorange;
+    margin-top: 56px;
+}
+
+
+
+.banner-category{
+    width: 100%;
+    height: 250px;
+    background-color: darkorange;
+    margin-top: 56px;
+}
+
+
+
+
+
+@media (max-width: 454px){
+    .form-nazarat{
+        margin-top: 30px !important;
+    }
+}
+
+
+@media (min-width: 455px) and (max-width: 900px){
+    .form-nazarat{
+        margin-top: 30px !important;
+    }
+}
+
+
+
+
+.banner-store{
+    width: 100%;
+    height: 250px;
+    background-color: darkorange;
+    margin-top: 56px;
+}
+
+
+
+.box-hesab-karbari{
+    width: 400px;
+    min-height: 350px;
+    background-color: #0164AF;
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+
+
+.box-contact{
+    width: 32%;
+    min-height: 200px;
+    background-color: transparent;
+    float: right;
+    margin-right: 11px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+
+
+
+.box-title{
+    width: 100%;
+    min-height: 85px;
+    background-color: transparent;
+}
+
+
+
+.ax-title{
+    width: 85px;
+    height: 85px;
+    background-color: #f4ba87;
+    float: right;
+    margin-right: 10px;
+    border-radius: 85px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: white;
+}
+
+
+
+.title{
+    width: 200px;
+    padding: 10px 0;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 19px;
+    font-family: Sahel-Bold;
+    color: white;
+}
+
+
+
+.box-matn-title{
+    width: 100%;
+    padding: 1px 0;
+    background-color: transparent;
+    margin-top: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    font-family: Yekan;
+    color: darkgray;
+}
+
+
+
+.box-matn{
+    width: 100%;
+    padding: 1px 0;
+    background-color: transparent;
+    margin-top: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    font-family: Yekan;
+    color: darkgray;
+}
+
+
+
+
+
+@media (max-width: 454px){
+
+    .box-contact{
+        width: 90%;
+        min-height: 200px;
+        border: 2px solid white;
+        float: none;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+
+
+    .ax-title{
+        width: 23%;
+        height: 85px;
+        background-color: #f4ba87;
+        float: right;
+        margin-right: 10px;
+        border-radius: 85px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        color: white;
+    }
+
+
+
+    .title{
+        width: 40%;
+        padding: 10px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 20px;
+        font-size: 17px;
+        font-family: Sahel-Bold;
+    }
+
+}
+
+
+
+
+@media (min-width: 455px) and (max-width: 700px){
+    .box-contact{
+        width: 90%;
+        min-height: 200px;
+        border: 1px solid white;
+        float: none;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 10px;
+    }
+
+
+
+
+    .ax-title{
+        width: 27%;
+        height: 85px;
+        background-color: #f4ba87;
+        float: right;
+        margin-right: 10px;
+        border-radius: 85px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        color: white;
+    }
+
+
+
+    .title{
+        width: 40%;
+        padding: 10px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 20px;
+        font-size: 17px;
+        font-family: Sahel-Bold;
+    }
+}
+
+
+
+
+@media (min-width: 701px) and (max-width: 900px){
+    .box-contact{
+        width: 45%;
+        min-height: 200px;
+        border: 1px solid white;
+        float: right;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 10px;
+    }
+
+
+
+
+    .ax-title{
+        width: 27%;
+        height: 85px;
+        background-color: #f4ba87;
+        float: right;
+        margin-right: 10px;
+        border-radius: 85px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        color: white;
+    }
+
+
+
+    .title{
+        width: 40%;
+        padding: 10px 0;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+        margin-top: 20px;
+        font-size: 17px;
+        font-family: Sahel-Bold;
+    }
+}
+
+
+
+
+.banner-article{
+    width: 100%;
+    height: 250px;
+    background-color: orange;
+    margin-top: 56px;
+}
+
