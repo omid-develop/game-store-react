@@ -1,3 +1,5 @@
+import image_abous_us from '../../assets/img/image-aboutUs.webp';
+
 const AboutUs = ()=>{
 
     return(
@@ -26,7 +28,7 @@ const AboutUs = ()=>{
                         </div>
 
                         <div className="col-lg-6 float-lg-end col-12 float-end col-sm-6 float-sm-end mt-lg-0 mt-4 mt-sm-0">
-                            <img src="img/image-aboutUs.webp" alt="" className="col-lg-7 d-lg-block m-lg-auto col-9 d-block m-auto col-sm-12 d-sm-block m-sm-auto" style={{borderRadius:"20px"}}/>
+                            <img src={image_abous_us} alt="not found" className="col-lg-7 d-lg-block m-lg-auto col-9 d-block m-auto col-sm-12 d-sm-block m-sm-auto" style={{borderRadius:"20px"}}/>
                         </div>
 
                     </div>

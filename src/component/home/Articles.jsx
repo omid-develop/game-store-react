@@ -1,3 +1,8 @@
+import game1 from '../../assets/img/game1.webp';
+import game2 from '../../assets/img/game2.webp';
+import game3 from '../../assets/img/game3.webp';
+import game4 from '../../assets/img/game4.webp';
+
 const Articles = ()=>{
 
     return(
@@ -28,7 +33,7 @@ const Articles = ()=>{
 
                             <div className="col-lg-12 m-lg-auto pb-lg-3 col-12 m-auto pb-3 col-sm-12 m-sm-auto pb-sm-3 col-md-12 m-md-auto pb-md-3" style={{borderRadius:"17px" , backgroundColor:"#151b2d"}}>
 
-                                <img src="img/game1.webp" alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
+                                <img src={game1} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
 
                                 <div className="col-lg-12 text-white m-lg-auto mt-lg-3 text-lg-center col-12 m-auto mt-3 text-center col-sm-12 m-sm-auto mt-sm-3 text-sm-center col-md-12 m-md-auto mt-md-3 text-md-center" style={{fontSize:"19px" , fontFamily:"Sahel-Bold"}}>اخبار کالاف تیوتی</div>
 
@@ -41,7 +46,7 @@ const Articles = ()=>{
 
                             <div className="col-lg-12 m-lg-auto pb-lg-3 col-12 m-auto pb-3 col-sm-12 m-sm-auto pb-sm-3 col-md-12 m-md-auto pb-md-3" style={{borderRadius:"17px" , backgroundColor:"#151b2d"}}>
 
-                                <img src="img/game1.webp" alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
+                                <img src={game2} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
 
                                 <div className="col-lg-12 text-white m-lg-auto mt-lg-3 text-lg-center col-12 m-auto mt-3 text-center col-sm-12 m-sm-auto mt-sm-3 text-sm-center col-md-12 m-md-auto mt-md-3 text-md-center" style={{fontSize:"19px" , fontFamily:"Sahel-Bold"}}>اخبار کالاف تیوتی</div>
 
@@ -54,7 +59,7 @@ const Articles = ()=>{
 
                             <div className="col-lg-12 m-lg-auto pb-lg-3 col-12 m-auto pb-3 col-sm-12 m-sm-auto pb-sm-3 col-md-12 m-md-auto pb-md-3" style={{borderRadius:"17px" , backgroundColor:"#151b2d"}}>
 
-                                <img src="img/game1.webp" alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
+                                <img src={game3} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
 
                                 <div className="col-lg-12 text-white m-lg-auto mt-lg-3 text-lg-center col-12 m-auto mt-3 text-center col-sm-12 m-sm-auto mt-sm-3 text-sm-center col-md-12 m-md-auto mt-md-3 text-md-center" style={{fontSize:"19px" , fontFamily:"Sahel-Bold"}}>اخبار کالاف تیوتی</div>
 
@@ -67,7 +72,7 @@ const Articles = ()=>{
 
                             <div className="col-lg-12 m-lg-auto pb-lg-3 col-12 m-auto pb-3 col-sm-12 m-sm-auto pb-sm-3 col-md-12 m-md-auto pb-md-3" style={{borderRadius:"17px" , backgroundColor:"#151b2d"}}>
 
-                                <img src="img/game1.webp" alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
+                                <img src={game4} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
 
                                 <div className="col-lg-12 text-white m-lg-auto mt-lg-3 text-lg-center col-12 m-auto mt-3 text-center col-sm-12 m-sm-auto mt-sm-3 text-sm-center col-md-12 m-md-auto mt-md-3 text-md-center" style={{fontSize:"19px" , fontFamily:"Sahel-Bold"}}>اخبار کالاف تیوتی</div>
 

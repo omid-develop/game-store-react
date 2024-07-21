@@ -2,8 +2,25 @@ import {Link} from "react-router-dom";
 // import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import {useState , useEffect} from "react";
+import {getAllItemsMenu} from "../../services/services_menu";
 
 const Navbar = ()=>{
+
+    const [navbar , setNavbar] = useState([]);
+
+    useEffect(()=>{
+
+        const fetchData = async()=>{
+
+            const response = await getAllItemsMenu();
+            setNavbar(response.data);
+
+        }
+
+        fetchData();
+
+    } , []);
 
     return(
 
@@ -29,21 +46,32 @@ const Navbar = ()=>{
                        <div className="offcanvas-body">
 
                            <ul className="navbar-nav justify-content-lg-start align-items-lg-center flex-grow-1 pe-3 me-lg-5 me-0" style={{fontSize:"16px" , fontFamily:"yekan"}}>
-                               <li className="nav-item me-2">
-                                   <Link to="/" className="nav-link active text-white" aria-current="page" href="#">خانه</Link>
-                               </li>
 
-                               <li className="nav-item me-2">
-                                   <Link to="/categories" className="nav-link text-white" aria-current="page" href="#">دسته بندی محصولات</Link>
-                               </li>
+                               {/*<li className="nav-item me-2">*/}
+                               {/*    <Link to="/" className="nav-link active text-white" aria-current="page" href="#">خانه</Link>*/}
+                               {/*</li>*/}
 
-                               <li className="nav-item me-lg-3 me-0">
-                                   <Link to="/about-us" className="nav-link text-white" aria-current="page" href="#">درباره ما</Link>
-                               </li>
+                               {/*<li className="nav-item me-2">*/}
+                               {/*    <Link to="/categories" className="nav-link text-white" aria-current="page" href="#">دسته بندی محصولات</Link>*/}
+                               {/*</li>*/}
 
-                               <li className="nav-item me-lg-3 me-0">
-                                   <Link to="/contact-us" className="nav-link text-white" aria-current="page" href="#">تماس با ما</Link>
-                               </li>
+                               {/*<li className="nav-item me-lg-3 me-0">*/}
+                               {/*    <Link to="/about-us" className="nav-link text-white" aria-current="page" href="#">درباره ما</Link>*/}
+                               {/*</li>*/}
+
+                               {/*<li className="nav-item me-lg-3 me-0">*/}
+                               {/*    <Link to="/contact-us" className="nav-link text-white" aria-current="page" href="#">تماس با ما</Link>*/}
+                               {/*</li>*/}
+
+                               {
+                                   navbar.map((option , index)=>(
+
+                                       <li key={index} className="nav-item me-lg-3 me-2">
+                                           <Link to={option.address} className="nav-link active text-white" aria-current="page" href="#">{option.create_item_menu}</Link>
+                                       </li>
+
+                                   ))
+                               }
 
                            </ul>
 

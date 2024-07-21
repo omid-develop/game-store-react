@@ -3,7 +3,7 @@ import {createBrowserRouter , RouterProvider} from "react-router-dom";
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import MainLayouts from "./layouts/MainLayouts";
-import '../public/css/style.css';
+import '../src/assets/css/style.css';
 import Categories from "./pages/Categories";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -15,6 +15,8 @@ import SingleProduct from "./pages/SingleProduct";
 import ReturningProduct from "./pages/ReturningProduct";
 import SingleArticle from "./pages/SingleArticle";
 import Store from "./pages/Store";
+import Panel from "./pages/admin/Panel";
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 
 const router = createBrowserRouter([
@@ -86,7 +88,13 @@ const router = createBrowserRouter([
 
         ]
 
+    } ,
+
+    {
+        path: "/admin/panel" ,
+        element: <Panel/>
     }
+
 ])
 
 

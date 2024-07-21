@@ -1,3 +1,6 @@
+import game from '../../assets/img/game.webp';
+import zare from '../../assets/img/zare.png';
+
 const IntroductionSite = ()=>{
 
     return(
@@ -62,14 +65,14 @@ const IntroductionSite = ()=>{
                         <div className="col-lg-6 col-12 col-sm-12 col-md-12 mt-lg-0 mt-4 mt-sm-4">
 
                             <div className="col-lg-12 d-lg-flex justify-content-lg-center align-items-lg-center image-intro d-none">
-                                <img src="img/game.webp" alt="" className="col-lg-7 image animation-image"/>
-                                <img src="img/zare.png" alt="" className="col-lg-12 animation-zare"/>
+                                <img src={game} alt="" className="col-lg-7 image animation-image"/>
+                                <img src={zare} alt="" className="col-lg-12 animation-zare"/>
                             </div>
 
                             {/*  Responsive in image game  */}
 
                             <div className="col-12 m-auto mt-4 col-sm-12 m-sm-auto mt-sm-4 d-lg-none">
-                                <img src="img/game.webp" alt="" className="col-6 d-block m-auto col-sm-9 d-sm-block m-sm-auto col-md-9 d-md-block m-md-auto"/>
+                                <img src={game} alt="" className="col-6 d-block m-auto col-sm-9 d-sm-block m-sm-auto col-md-9 d-md-block m-md-auto"/>
                             </div>
 
                             <div className="col-lg-12 text-white m-lg-auto text-lg-center col-12 col-sm-12 col-md-12 text-center text-sm-center text-md-center" style={{fontSize:"35px" , fontFamily:"Sahel-Bold"}}>خرید CP کالاف</div>

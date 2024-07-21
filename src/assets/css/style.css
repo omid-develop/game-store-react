@@ -919,3 +919,53 @@ body{
     margin-top: 56px;
 }
 
+
+
+
+.container-panel{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #353c48;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+
+
+.nav-panel{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-family: Sahel-Bold;
+    color: black;
+}
+
+
+.box-item-panel{
+    width: 18%;
+    height: 100vh;
+    /*background-color: red !important;*/
+    /*color: white!important;*/
+    margin-top: 50px;
+    position: fixed;
+    border-left: 1px solid black;
+    /*overflow-y: scroll;*/
+}
+
+
+
+
+.box-mohtava-panel{
+    width: 70%;
+    min-height: 100px;
+    background-color: darkslateblue;
+    margin-right: 350px;
+    margin-top: 60px;
+}

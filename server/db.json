@@ -1,20 +1,131 @@
 {
-  "categories": [
+  "list_games": [
     {
-      "name": "پلی استیشن",
+      "nameGames": "گرن توریسمو اسپورت",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
       "id": 1
     },
     {
-      "name": "موبایل",
+      "nameGames": "جن بتنی",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
       "id": 2
     },
     {
-      "name": "ios",
+      "nameGames": "یاکوزا ۶",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
       "id": 3
     },
     {
-      "name": "دسکتاپ",
+      "nameGames": "استریت فایتر ۵",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 4
+    },
+    {
+      "nameGames": "تیراوی آنفولدد",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 5
+    },
+    {
+      "nameGames": "رچت اند کلنک",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 6
+    },
+    {
+      "nameGames": "آنچارتد",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 7
+    },
+    {
+      "nameGames": "سایه‌ی ‌غول‌پیکر",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 8
+    },
+    {
+      "nameGames": "دیترویت",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 9
+    },
+    {
+      "nameGames": "پرسونا ۵",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 10
+    },
+    {
+      "nameGames": "آخرین محافظ",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 11
+    },
+    {
+      "nameGames": "گوست آو سوشیما",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 12
+    },
+    {
+      "nameGames": "آخرین ما",
+      "priceGame": 120,
+      "discount": 90,
+      "designed": "پلی استیشن",
+      "category": "پلی استیشن",
+      "id": 13
+    }
+  ],
+  "menu": [
+    {
+      "create_item_menu": "صفحه اصلی",
+      "id": 1
+    },
+    {
+      "create_item_menu": "دسته بندی محصولات",
+      "address": "/categories",
+      "id": 2
+    },
+    {
+      "create_item_menu": "درباره ما",
+      "address": "/about-us",
+      "id": 3
+    },
+    {
+      "create_item_menu": "تماس با ما",
       "id": 4
     }
-  ]
+  ],
+
+
+  "categories": []
 }

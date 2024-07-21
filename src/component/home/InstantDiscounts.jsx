@@ -1,3 +1,5 @@
+import background_time from '../../assets/img/background-time.png';
+
 const InstantDiscounts = ()=>{
 
     return(
@@ -12,7 +14,7 @@ const InstantDiscounts = ()=>{
                         <div className="col-lg-3 float-lg-end col-12 m-lg-0 m-auto">
 
                             <div className="col-lg-12 m-lg-auto col-12 m-auto">
-                                <img src="img/background-time.png" alt="" className="col-lg-12 col-8 d-block m-auto col-md-6 d-md-block m-md-auto"/>
+                                <img src={background_time} alt="" className="col-lg-12 col-8 d-block m-auto col-md-6 d-md-block m-md-auto"/>
 
                                 <div className="col-lg-12 m-lg-auto mt-lg-2 text-lg-center col-12 m-auto mt-2 text-center text-white" style={{fontSize:"21px" , fontFamily:"Sahel-Bold"}}>تخفیفات لحظه ای</div>
 
@@ -82,9 +84,9 @@ const InstantDiscounts = ()=>{
                                 <div id="carouselExampleIndicators" className="carousel slide">
 
                                     <div className="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"> </button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"> </button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"> </button>
                                     </div>
 
                                     <div className="carousel-inner">

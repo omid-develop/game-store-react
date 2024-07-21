@@ -1,5 +1,6 @@
-ابزارهایی که در پروژه نصب شده اند : 
+ابزارهایی که درون این پروژه نصب شده اند عبارتند از :
 
-1- بوت استرپ 
-2 - react-icons 
-3 - react-router-dom 
+1- bootstrap
+2- react-icons
+3- react-router-dom
+4- axios
