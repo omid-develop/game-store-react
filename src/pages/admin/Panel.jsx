@@ -2,7 +2,7 @@ import {Tabs, Tab} from "@mui/material";
 import {useState} from "react";
 import TabPanel from "./tabs/TabPanel";
 import MenuCreate from "./panel_components/menu/MenuCreate";
-
+import AppCategory from "./panel_components/categories/AppCategory";
 const Panel = ()=>{
 
 
@@ -59,7 +59,9 @@ const Panel = ()=>{
 
                   <TabPanel value={value} index={1}>
 
-                      <h1>دسته بندی محصولات</h1>
+                      {/*<GetAllCategory/>*/}
+                      {/*<Categories/>*/}
+                      <AppCategory/>
 
                   </TabPanel>
 

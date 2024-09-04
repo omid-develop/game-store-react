@@ -112,20 +112,43 @@
     },
     {
       "create_item_menu": "دسته بندی محصولات",
-      "address": "/categories",
       "id": 2
     },
     {
       "create_item_menu": "درباره ما",
-      "address": "/about-us",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "nameCategory": "پلی استیشن",
+      "imageCategory": "../src/assets/img/logo-playStation.png",
+      "id": 1
+    },
+    {
+      "nameCategory": "ایکس باکس",
+      "imageCategory": "../src/assets/img/logo-Xbox.png",
+      "id": 2
+    },
+    {
+      "nameCategory": "ویندوز",
+      "imageCategory": "../src/assets/img/logo-windows.png",
       "id": 3
     },
     {
-      "create_item_menu": "تماس با ما",
+      "nameCategory": "بازی های IOS",
+      "imageCategory": "../src/assets/img/logo-IOS.png",
       "id": 4
+    },
+    {
+      "nameCategory": "استیم",
+      "imageCategory": "../src/assets/img/logo-stim.png",
+      "id": 5
+    },
+    {
+      "nameCategory": "اوریجین",
+      "imageCategory": "../src/assets/img/logo-origin.png",
+      "id": 6
     }
-  ],
-
-
-  "categories": []
+  ]
 }

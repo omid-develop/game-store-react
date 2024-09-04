@@ -1,11 +1,23 @@
-import logo_playStation from '../../assets/img/logo-playStation.png';
-import logo_Xbox from '../../assets/img/logo-Xbox.png';
-import logo_windows from '../../assets/img/logo-windows.png';
-import logo_IOS from '../../assets/img/logo-IOS.png';
-import logo_stim from '../../assets/img/logo-stim.png';
-import logo_origin from '../../assets/img/logo-origin.png';
+import {useState , useEffect} from "react";
+import {getAllCategories} from "../../services/services_category";
 
 const Category = ()=>{
+
+    const [allCategory , setAllCategory] = useState([]);
+
+    useEffect(()=>{
+
+        const fetchData = async ()=>{
+
+            const response = await getAllCategories();
+            // console.log(response.data);
+            setAllCategory(response.data);
+
+        }
+
+        fetchData();
+
+    } , []);
 
     return(
 
@@ -22,7 +34,7 @@ const Category = ()=>{
 
                         <div className="col-lg-6 col-6">
                             <div className="col-lg-12 col-12">
-                                <a href="#" className="col-lg-3 float-lg-start text-decoration-none text-black text-lg-center col-9 float-start text-center col-sm-5 float-sm-start text-white" style={{backgroundColor:"#505669" , padding:"9px 0" , borderRadius:"5px" , fontFamily:"Sahel-Bold"}}>موارد بیشتر <i className="fas fa-angle-left"></i></a>
+                                <a href="#" className="col-lg-3 float-lg-start text-decoration-none text-black text-lg-center col-9 float-start text-center col-sm-5 float-sm-start text-white" style={{backgroundColor:"#505669" , padding:"9px 0" , borderRadius:"5px" , fontFamily:"Sahel-Bold"}}>موارد بیشتر <i className="fas fa-angle-left"> </i></a>
                             </div>
                         </div>
 
@@ -31,61 +43,20 @@ const Category = ()=>{
 
                     <div className="row mt-lg-1">
 
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_playStation} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
+                        {
+                            allCategory.map((category , index)=>(
 
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>پلی استیشن</div>
+                                <div key={index} className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
+                                    <div className="box-ax-category">
+                                        <img src={category.imageCategory} alt="" className="col-lg-12 col-12 col-sm-12"/>
+                                    </div>
 
-                        </div>
+                                    <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>{category.nameCategory}</div>
 
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_Xbox} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
+                                </div>
 
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>ایکس باکس</div>
-
-                        </div>
-
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_windows} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
-
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>ویندوز</div>
-
-                        </div>
-
-
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_IOS} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
-
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>بازی های IOS</div>
-
-                        </div>
-
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_stim} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
-
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>استیم</div>
-
-                        </div>
-
-
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_origin} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
-
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>اوریجین</div>
-
-                        </div>
+                            ))
+                        }
 
                     </div>
 

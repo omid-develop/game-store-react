@@ -31,12 +31,6 @@ const MenuCreate = ()=>{
         setOpenEdit(true);
         setOmidId(id);
 
-        // const item = ()=>{
-        //     setItem();
-        // }
-        //
-        // item();
-
     }
 
     const closeEditModal = ()=>{
@@ -203,7 +197,9 @@ const MenuCreate = ()=>{
 
         <>
 
-           <div className="col-lg-10 m-lg-auto d-flex justify-content-lg-center mt-lg-4">
+            <div className="col-lg-10 text-lg-center text-white border border-2 border-white p-lg-1" style={{fontSize:"22px" , fontFamily:"Sahel-Bold" , margin:"auto" ,  marginTop:"20px" , borderRadius:"10px"}}>منو</div>
+
+           <div className="col-lg-10 m-lg-auto d-flex justify-content-lg-center mt-lg-5">
 
                <button onClick={openModal} className="btn col-lg-2" style={{fontSize:"16px" , fontFamily:"yekan" , backgroundColor:"green" , color:"white"}}>ساخت منو</button>
 
@@ -220,7 +216,7 @@ const MenuCreate = ()=>{
 
                         getItems.map((getItem)=>(
 
-                            <div key={getItem.id} className="col-lg-8 m-lg-auto mt-lg-5 d-lg-flex justify-content-lg-center" style={{borderRadius:"20px" , backgroundColor:"white"}}>
+                            <div key={getItem.id} className="col-lg-8 m-lg-auto mt-lg-5 mb-lg-5 d-lg-flex justify-content-lg-center" style={{borderRadius:"20px" , backgroundColor:"white"}}>
 
                                 <div className="col-lg-3 d-lg-flex justify-content-lg-center">
 
