@@ -991,11 +991,12 @@ body{
 
 .box-modal{
     width: 600px;
-    height: 400px;
+    min-height: 400px;
     background-color: white;
     margin: auto;
     padding-right: 20px;
     padding-left: 20px;
+    padding-bottom: 25px;
     border-radius: 20px;
 }
 

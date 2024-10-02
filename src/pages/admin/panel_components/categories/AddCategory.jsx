@@ -6,7 +6,7 @@ const AddCategory = ({closeModal})=>{
     const [addCategory , setAddCategory] = useState({
         nameCategory:"" ,
         imageCategory:""
-    })
+    });
 
 
     const handleChangeInput = (event)=>{
@@ -55,7 +55,6 @@ const AddCategory = ({closeModal})=>{
                 </div>
 
             </div>
-
         </>
 
     )

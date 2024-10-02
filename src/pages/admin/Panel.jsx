@@ -3,6 +3,7 @@ import {useState} from "react";
 import TabPanel from "./tabs/TabPanel";
 import MenuCreate from "./panel_components/menu/MenuCreate";
 import AppCategory from "./panel_components/categories/AppCategory";
+import AppProduct from "./panel_components/products/AppProduct";
 const Panel = ()=>{
 
 
@@ -41,7 +42,7 @@ const Panel = ()=>{
 
                       <Tab style={{color:"white"}} label="منو" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(0)}/>
                       <Tab style={{color:"white"}} label="دسته بندی محصولات" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(1)}/>
-                      <Tab style={{color:"white"}} label="نظرات شما" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(2)}/>
+                      <Tab style={{color:"white"}} label="محصولات" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(2)}/>
                       <Tab style={{color:"white"}} label="خروج" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(3)}/>
 
                   </Tabs>
@@ -59,15 +60,13 @@ const Panel = ()=>{
 
                   <TabPanel value={value} index={1}>
 
-                      {/*<GetAllCategory/>*/}
-                      {/*<Categories/>*/}
                       <AppCategory/>
 
                   </TabPanel>
 
                   <TabPanel value={value} index={2}>
 
-                      <h1>نظرات شما</h1>
+                      <AppProduct/>
 
                   </TabPanel>
 
