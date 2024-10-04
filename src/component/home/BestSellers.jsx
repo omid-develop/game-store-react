@@ -13,7 +13,7 @@ const BestSellers = ()=>{
             // console.log(response.data);
             const data = response.data;
             const AllProduct = data.sort((a , b)=> b.sales - a.sales ).slice(0 , 9);
-            console.log(AllProduct);
+            // console.log(AllProduct);
             setProducts(AllProduct);
 
         }
@@ -71,7 +71,7 @@ const BestSellers = ()=>{
 
                                         </div>
 
-                                        <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
+                                        <div className="name-system">طراحی شده برای : <span>{product.category}</span></div>
 
                                     </div>
 
