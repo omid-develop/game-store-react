@@ -91,20 +91,7 @@
       "id": 9
     }
   ],
-  "menu": [
-    {
-      "create_item_menu": "صفحه اصلی",
-      "id": 1
-    },
-    {
-      "create_item_menu": "دسته بندی محصولات",
-      "id": 2
-    },
-    {
-      "create_item_menu": "درباره ما",
-      "id": 3
-    }
-  ],
+  "menu": [],
   "categories": [
     {
       "nameCategory": "پلی استیشن",

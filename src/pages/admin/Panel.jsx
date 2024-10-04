@@ -1,9 +1,10 @@
 import {Tabs, Tab} from "@mui/material";
 import {useState} from "react";
 import TabPanel from "./tabs/TabPanel";
-import MenuCreate from "./panel_components/menu/MenuCreate";
 import AppCategory from "./panel_components/categories/AppCategory";
 import AppProduct from "./panel_components/products/AppProduct";
+import AppMenu from "./panel_components/menu/AppMenu";
+
 const Panel = ()=>{
 
 
@@ -54,7 +55,7 @@ const Panel = ()=>{
 
                   <TabPanel value={value} index={0}>
 
-                      <MenuCreate/>
+                      <AppMenu/>
 
                   </TabPanel>
 

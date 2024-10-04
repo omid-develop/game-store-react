@@ -15,7 +15,7 @@ const Footer = ()=>{
 
                                 <div className="col-lg-12 m-lg-auto col-12 m-auto col-sm-12 m-sm-auto text-lg-end text-center text-sm-center text-white" style={{fontSize:"19px" , fontFamily:"Sahel-Bold"}}>فروشگاه بازی امید</div>
 
-                                <div className="col-lg-12 m-lg-auto mt-lg-4 col-12 m-auto mt-4 col-sm-12 m-sm-auto mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"16px" , fontFamily:"yekan" , color:"#7293a7"}}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطراست.</div>
+                                <div className="col-lg-12 m-lg-auto mt-lg-4 col-12 m-auto mt-4 col-sm-12 m-sm-auto mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"16px" , fontFamily:"yekan" , color:"#7293a7"}}>ما در فروشگاه خود با قرار دادن بهترین بازی ها سعی کرده ایم نوجوانان را به برخی از بازی های کامپیوتری علاقه مند نماییم . </div>
 
                                 <div className="col-lg-12 m-lg-auto mt-lg-5 text-lg-end col-12 m-auto mt-4 col-sm-12 m-sm-auto mt-sm-4 text-center text-sm-center" style={{fontSize:"16px" , fontFamily:"yekan" , color:"#7293a7"}}>
                                     <i className="fa-solid fa-phone" style={{fontSize:"20px"}}> </i> <span style={{marginRight:"8px"}}>09309462125</span>
@@ -74,22 +74,22 @@ const Footer = ()=>{
 
                                 <div className="col-lg-12 m-lg-auto pt-lg-2 pb-lg-2 mt-lg-4 pe-lg-3 col-12 m-auto pt-2 pb-2 mt-4 pe-3 col-sm-12 m-sm-auto pt-sm-2 pb-sm-2 mt-sm-4 pe-sm-3 text-lg-end text-center text-sm-center" style={{borderRadius:"7px"}}>
                                     <i className="fa-brands fa-instagram" style={{fontSize:"25px" , color:"#7293a7"}}> </i>
-                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>instagram</span>
+                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>GameStore.ir</span>
                                 </div>
 
                                 <div className="col-lg-12 m-lg-auto mt-lg-3 pt-lg-2 pb-lg-2 mt-lg-4 pe-lg-3 col-12 m-auto pt-2 pb-2 mt-4 pe-3 col-sm-12 m-sm-auto pt-sm-2 pb-sm-2 mt-sm-4 pe-sm-3 text-lg-end text-center text-sm-center" style={{borderRadius:"7px"}}>
-                                    <i className="fa-brands fa-instagram" style={{fontSize:"25px" , color:"#7293a7"}}> </i>
-                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>instagram</span>
+                                    <i className="fab fa-telegram" style={{fontSize:"25px" , color:"#7293a7"}}> </i>
+                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>GameStore.ir</span>
                                 </div>
 
                                 <div className="col-lg-12 m-lg-auto mt-lg-3 pt-lg-2 pb-lg-2 mt-lg-4 pe-lg-3 col-12 m-auto pt-2 pb-2 mt-4 pe-3 col-sm-12 m-sm-auto pt-sm-2 pb-sm-2 mt-sm-4 pe-sm-3 text-lg-end text-center text-sm-center" style={{borderRadius:"7px"}}>
-                                    <i className="fa-brands fa-instagram" style={{fontSize:"25px" , color:"#7293a7"}}> </i>
-                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>instagram</span>
+                                    <i className="fa-brands fa-linkedin" style={{fontSize:"25px" , color:"#7293a7"}}> </i>
+                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>GameStore.ir</span>
                                 </div>
 
                                 <div className="col-lg-12 m-lg-auto mt-lg-3 pt-lg-2 pb-lg-2 mt-lg-4 pe-lg-3 col-12 m-auto pt-2 pb-2 mt-4 pe-3 col-sm-12 m-sm-auto pt-sm-2 pb-sm-2 mt-sm-4 pe-sm-3 text-lg-end text-center text-sm-center" style={{borderRadius:"7px"}}>
-                                    <i className="fa-brands fa-instagram" style={{fontSize:"25px" , color:"#7293a7"}}> </i>
-                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>instagram</span>
+                                    <i className="fa-brands fa-twitter" style={{fontSize:"25px" , color:"#7293a7"}}> </i>
+                                    <span style={{marginTop:"-20px" , fontSize:"15px" , color:"#7293a7" , marginRight:"10px"}}>GameStore.ir</span>
                                 </div>
 
                             </div>
