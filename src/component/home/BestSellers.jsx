@@ -1,4 +1,26 @@
+import {useState , useEffect} from "react";
+import {getAllProducts} from "../../services/services_products";
+
 const BestSellers = ()=>{
+
+    const [products , setProducts] = useState([]);
+
+    useEffect(()=>{
+
+        const fetchData = async ()=>{
+
+            const response = await getAllProducts();
+            // console.log(response.data);
+            const data = response.data;
+            const AllProduct = data.sort((a , b)=> b.sales - a.sales ).slice(0 , 9);
+            console.log(AllProduct);
+            setProducts(AllProduct);
+
+        }
+
+        fetchData();
+
+    } , []);
 
     return(
 
@@ -13,12 +35,6 @@ const BestSellers = ()=>{
                             <div className="col-lg-12 col-12 font-category text-white" style={{fontSize:"23px" , fontFamily:"Sahel-Bold"}}>پر فروش ترین ها</div>
                         </div>
 
-                        <div className="col-lg-6 col-6">
-                            <div className="col-lg-12 col-12">
-                                <a href="#" className="col-lg-3 float-lg-start text-decoration-none text-black text-lg-center col-9 float-start text-center col-sm-5 float-sm-start text-white" style={{backgroundColor:"#505669" , padding:"9px 0" , borderRadius:"5px" , fontFamily:"Sahel-Bold"}}>موارد بیشتر <i className="fas fa-angle-left"> </i></a>
-                            </div>
-                        </div>
-
                     </div>
 
 
@@ -26,149 +42,41 @@ const BestSellers = ()=>{
 
                         <div className="box-bestSellers">
 
-                            <div className="box-forush">
+                            {
+                                products.map((product , index)=>(
 
-                                <div className="ax-game"> </div>
+                                    <div key={index} className="box-forush">
 
-                                <div className="title-game">جی تی ای</div>
+                                        <div className="ax-game"> </div>
 
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
+                                        <div className="title-game">{product.nameProduct}</div>
 
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
+                                        <div className="box-price">
 
-                            </div>
+                                            {
+                                                product.discount !== "ندارد" ? (
+                                                        <>
+                                                        <div className="price-game" style={{textDecoration: 'line-through'}}>{product.price} تومان </div>
+                                                        <div className="discount-game"> تخفیف : {product.discount}</div>
+                                                        </>
+                                                )
+                                                :
+                                                (
+                                                    <>
+                                                        <div className="price-game">{product.price} تومان </div>
+                                                        <div className="discount-game"> تخفیف : {product.discount}</div>
+                                                    </>
+                                                )
+                                            }
 
+                                        </div>
 
-                            <div className="box-forush">
+                                        <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
 
-                                <div className="ax-game"> </div>
+                                    </div>
 
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
-
-                            <div className="box-forush">
-
-                                <div className="ax-game"> </div>
-
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
-
-                            <div className="box-forush">
-
-                                <div className="ax-game"> </div>
-
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
-
-                            <div className="box-forush">
-
-                                <div className="ax-game"> </div>
-
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
-
-                            <div className="box-forush">
-
-                                <div className="ax-game"> </div>
-
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
-
-                            <div className="box-forush">
-
-                                <div className="ax-game"> </div>
-
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
-
-                            <div className="box-forush">
-
-                                <div className="ax-game"> </div>
-
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
-
-                            <div className="box-forush">
-
-                                <div className="ax-game"> </div>
-
-                                <div className="title-game">جی تی ای</div>
-
-                                <div className="box-price">
-                                    <div className="price-game">100000 تومان</div>
-                                    <div className="discount-game">90000 تومان</div>
-                                </div>
-
-                                <div className="name-system">طراحی شده برای : <span>پلی استشین</span></div>
-
-                            </div>
-
+                                ))
+                            }
 
                         </div>
 
