@@ -11,37 +11,36 @@ export const getAllItemsMenu = ()=>{
 }
 
 
-export const getItemMenu = (menuId)=>{
+export const getItemsMenu = (idMenu)=>{
 
-    const url = `${SERVER_URL}/menu/${menuId}`;
+    const url = `${SERVER_URL}/menu/${idMenu}`;
+
     return axios.get(url);
 
 }
 
 
-
-export const createMenu = (menu)=>{
+export const createItemMenu = (item)=>{
 
     const url = `${SERVER_URL}/menu`;
 
-    return axios.post(url , menu);
+    return axios.post(url , item);
 
 }
 
 
+export const updateMenu = (item , idMenu)=>{
 
-export const updateMenu = (menu , menuId)=>{
+    const url = `${SERVER_URL}/menu/${idMenu}`;
 
-    const url = `${SERVER_URL}/menu/${menuId}`;
-
-    return axios.put(url , menu);
+    return axios.put(url , item);
 
 }
 
 
-export const deleteMenu = (menuId)=>{
+export const deleteMenu = (idMenu)=>{
 
-    const url = `${SERVER_URL}/menu/${menuId}`;
+    const url = `${SERVER_URL}/menu/${idMenu}`;
 
     return axios.delete(url);
 

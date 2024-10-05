@@ -91,7 +91,28 @@
       "id": 9
     }
   ],
-  "menu": [],
+  "menu": [
+    {
+      "nameItem": "صفحه اصلی",
+      "url_item": "/",
+      "id": 1
+    },
+    {
+      "nameItem": "دسته بندی محصولات",
+      "url_item": "",
+      "id": 2
+    },
+    {
+      "nameItem": "درباره ما",
+      "url_item": "",
+      "id": 3
+    },
+    {
+      "nameItem": "تماس با ما",
+      "url_item": "",
+      "id": 4
+    }
+  ],
   "categories": [
     {
       "nameCategory": "پلی استیشن",
