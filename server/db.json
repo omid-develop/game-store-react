@@ -93,23 +93,23 @@
   ],
   "menu": [
     {
-      "nameItem": "صفحه اصلی",
+      "nameItem": "صفحه اصلی ",
       "url_item": "/",
       "id": 1
     },
     {
       "nameItem": "دسته بندی محصولات",
-      "url_item": "",
+      "url_item": "/categories",
       "id": 2
     },
     {
       "nameItem": "درباره ما",
-      "url_item": "",
+      "url_item": "/about-us",
       "id": 3
     },
     {
       "nameItem": "تماس با ما",
-      "url_item": "",
+      "url_item": "/contact-us",
       "id": 4
     }
   ],

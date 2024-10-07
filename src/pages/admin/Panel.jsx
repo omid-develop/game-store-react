@@ -73,7 +73,7 @@ const Panel = ()=>{
 
                   <TabPanel value={value} index={3}>
 
-                      <h1>خروج</h1>
+                     خروج
 
                   </TabPanel>
 

@@ -1,31 +1,31 @@
 import ViewMenu from "./ViewMenu";
 import {useState , useEffect} from "react";
-import {getAllItemsMenu} from "../../../../services/services_menu";
+import {getAllMenu} from "../../../../services/services_menu";
 import {ToastContainer} from "react-toastify";
 
 const AppMenu = ()=>{
 
-    const [AllItem , setAllItem] = useState([]);
+    const [allMenu , setAllMenu] = useState([]);
 
     useEffect(()=>{
 
         const fetchData = async ()=>{
 
-            const response = await getAllItemsMenu();
-            console.log(response.data);
-            setAllItem(response.data);
+            const response = await getAllMenu();
+            // console.log(response.data);
+            setAllMenu(response.data);
 
         }
 
         fetchData();
 
-    } , []);
+    } , [allMenu]);
 
     return(
 
         <>
 
-            <ViewMenu items={AllItem}/>
+           <ViewMenu allMenu={allMenu}/>
 
             <ToastContainer
                 position="top-right"
