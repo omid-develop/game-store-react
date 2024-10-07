@@ -26,7 +26,7 @@ const BestSellers = ()=>{
 
         <>
 
-            <div className="container-fluid mt-lg-5 mt-5" style={{minHeight:"280px"}}>
+            <div id="best_seller" className="container-fluid mt-lg-5 mt-5" style={{minHeight:"280px"}}>
                 <div className="container" style={{height:"100%" , maxWidth:"1210px"}}>
 
                     <div className="row">

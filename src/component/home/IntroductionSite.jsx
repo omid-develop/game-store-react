@@ -20,8 +20,8 @@ const IntroductionSite = ()=>{
                             <div className="col-lg-12 m-lg-auto mt-lg-5 col-12 col-sm-12 col-md-12 m-auto m-md-auto m-sm-auto text-lg-end text-center text-md-end text-sm-end mt-4 mt-sm-4 mt-md-4 text-white" style={{fontSize:"18px" , fontFamily:"yekan"}}>شما می توانید برای مشاهده انواع بازی های ما با کلیک ب روی دکمه زیر به صفحه فروشگاه ما بروید .</div>
 
                             <div className="col-lg-12 d-lg-flex justify-content-lg-center mt-lg-3 mt-4">
-                                <button className="btn mt-lg-4 col-lg-5 col-12 col-sm-5 col-md-4" style={{fontSize:"17px" , fontFamily:"Sahel-Bold" , paddingRight:"35px" , paddingLeft:"35px" , paddingTop:"10px" , paddingBottom:"10px" , backgroundColor:"#a04cff" , color:"white"}}>خرید آیتم های بازی <i className="fas fa-arrow-left"> </i></button>
-                                <button className="btn mt-lg-4 me-lg-5 col-lg-5 col-12 mt-4 col-sm-5 col-md-4 mt-sm-0 mt-md-0 me-0 me-md-4 me-sm-4" style={{fontSize:"17px" , fontFamily:"Sahel-Bold" , paddingRight:"35px" , paddingLeft:"35px" , paddingTop:"10px" , paddingBottom:"10px" , backgroundColor:"#a04cff" , color:"white"}}>پروفرش ترین بازی ها <i className="fas fa-arrow-down"> </i></button>
+                                <a className="btn mt-lg-4 col-lg-5 col-12 col-sm-5 col-md-4" style={{fontSize:"17px" , fontFamily:"Sahel-Bold" , paddingRight:"35px" , paddingLeft:"35px" , paddingTop:"10px" , paddingBottom:"10px" , backgroundColor:"#a04cff" , color:"white"}}>خرید آیتم های بازی <i className="fas fa-arrow-left"> </i></a>
+                                <a href="#best_seller" className="btn mt-lg-4 me-lg-5 col-lg-5 col-12 mt-4 col-sm-5 col-md-4 mt-sm-0 mt-md-0 me-0 me-md-4 me-sm-4" style={{fontSize:"17px" , fontFamily:"Sahel-Bold" , paddingRight:"35px" , paddingLeft:"35px" , paddingTop:"10px" , paddingBottom:"10px" , backgroundColor:"#a04cff" , color:"white"}}>پروفرش ترین بازی ها <i className="fas fa-arrow-down"> </i></a>
                             </div>
 
                             <div

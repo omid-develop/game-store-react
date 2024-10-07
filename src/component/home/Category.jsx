@@ -34,7 +34,7 @@ const Category = ()=>{
 
                         <div className="col-lg-6 col-6">
                             <div className="col-lg-12 col-12">
-                                <a href="#" className="col-lg-3 float-lg-start text-decoration-none text-black text-lg-center col-9 float-start text-center col-sm-5 float-sm-start text-white" style={{backgroundColor:"#505669" , padding:"9px 0" , borderRadius:"5px" , fontFamily:"Sahel-Bold"}}>موارد بیشتر <i className="fas fa-angle-left"> </i></a>
+                                <a href="/categories" className="col-lg-3 float-lg-start text-decoration-none text-black text-lg-center col-9 float-start text-center col-sm-5 float-sm-start text-white" style={{backgroundColor:"#505669" , padding:"9px 0" , borderRadius:"5px" , fontFamily:"Sahel-Bold"}}>موارد بیشتر <i className="fas fa-angle-left"> </i></a>
                             </div>
                         </div>
 

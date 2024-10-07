@@ -44,7 +44,6 @@ const Panel = ()=>{
                       <Tab style={{color:"white"}} label="منو" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(0)}/>
                       <Tab style={{color:"white"}} label="دسته بندی محصولات" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(1)}/>
                       <Tab style={{color:"white"}} label="محصولات" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(2)}/>
-                      <Tab style={{color:"white"}} label="خروج" sx={{fontSize:"17px" , fontFamily:"yekan" , marginTop:"10px"}} {...tabProps(3)}/>
 
                   </Tabs>
 
@@ -68,12 +67,6 @@ const Panel = ()=>{
                   <TabPanel value={value} index={2}>
 
                       <AppProduct/>
-
-                  </TabPanel>
-
-                  <TabPanel value={value} index={3}>
-
-                     خروج
 
                   </TabPanel>
 
