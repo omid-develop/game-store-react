@@ -1,5 +1,6 @@
 import {useState , useEffect} from "react";
 import {getAllProducts} from "../../services/services_products";
+import {Link} from "react-router-dom";
 
 const BestSellers = ()=>{
 
@@ -47,31 +48,34 @@ const BestSellers = ()=>{
 
                                     <div key={index} className="box-forush">
 
-                                        <div className="ax-game"> </div>
+                                        <Link to={`/single-product/${product.id}`}>
+                                            <div className="ax-game"> </div>
 
-                                        <div className="title-game">{product.nameProduct}</div>
+                                            <div className="title-game">{product.nameProduct}</div>
 
-                                        <div className="box-price">
+                                            <div className="box-price">
 
-                                            {
-                                                product.discount !== "ندارد" ? (
-                                                        <>
-                                                        <div className="price-game" style={{textDecoration: 'line-through'}}>{product.price} تومان </div>
-                                                        <div className="discount-game"> تخفیف : {product.discount}</div>
-                                                        </>
-                                                )
-                                                :
-                                                (
-                                                    <>
-                                                        <div className="price-game">{product.price} تومان </div>
-                                                        <div className="discount-game"> تخفیف : {product.discount}</div>
-                                                    </>
-                                                )
-                                            }
+                                                {
+                                                    product.discount !== "ندارد" ? (
+                                                            <>
+                                                                <div className="price-game" style={{textDecoration: 'line-through'}}>{product.price} تومان </div>
+                                                                <div className="discount-game"> تخفیف : {product.discount}</div>
+                                                            </>
+                                                        )
+                                                        :
+                                                        (
+                                                            <>
+                                                                <div className="price-game">{product.price} تومان </div>
+                                                                <div className="discount-game"> تخفیف : {product.discount}</div>
+                                                            </>
+                                                        )
+                                                }
 
-                                        </div>
+                                            </div>
 
-                                        <div className="name-system">طراحی شده برای : <span>{product.category}</span></div>
+                                            <div className="name-system">طراحی شده برای : <span>{product.category}</span></div>
+
+                                        </Link>
 
                                     </div>
 

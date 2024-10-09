@@ -52,7 +52,7 @@ const router = createBrowserRouter([
             } ,
 
             {
-                path: "/category-product" ,
+                path: "/category-product/:categoryName" ,
                 element: <Category/>
             } ,
 
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
             } ,
 
             {
-                path: "/single-product" ,
+                path: "/single-product/:id" ,
                 element: <SingleProduct/>
             } ,
 

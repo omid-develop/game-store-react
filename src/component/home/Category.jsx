@@ -1,5 +1,6 @@
 import {useState , useEffect} from "react";
 import {getAllCategories} from "../../services/services_category";
+import {Link} from "react-router-dom";
 
 const Category = ()=>{
 
@@ -47,11 +48,17 @@ const Category = ()=>{
                             allCategory.map((category , index)=>(
 
                                 <div key={index} className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                                    <div className="box-ax-category">
-                                        <img src={category.imageCategory} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                                    </div>
 
-                                    <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>{category.nameCategory}</div>
+                                    <Link to={`category-product/${category.nameCategory}`} className="text-decoration-none">
+
+                                        <div className="box-ax-category">
+                                            <img src={category.imageCategory} alt="" className="col-lg-12 col-12 col-sm-12"/>
+                                        </div>
+
+                                        <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>{category.nameCategory}</div>
+
+
+                                    </Link>
 
                                 </div>
 

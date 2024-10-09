@@ -4,8 +4,27 @@ import logo_windows from '../../assets/img/logo-windows.png';
 import logo_IOS from '../../assets/img/logo-IOS.png';
 import logo_stim from '../../assets/img/logo-stim.png';
 import logo_origin from '../../assets/img/logo-origin.png';
+import {useState , useEffect} from "react";
+import {getAllCategories} from "../../services/services_category";
+import {Link} from "react-router-dom";
 
 const ProductCategories = ()=>{
+
+    const [allCategories , setAllCategories] = useState([]);
+
+    useEffect(()=>{
+
+        const fetchData = async ()=>{
+
+            const response = await getAllCategories();
+            console.log(response.data);
+            setAllCategories(response.data);
+
+        }
+
+        fetchData();
+
+    } , []);
 
     return(
 
@@ -18,61 +37,26 @@ const ProductCategories = ()=>{
 
                         <div className="col-lg-12 m-lg-auto text-lg-center col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center col-md-12 m-md-auto text-md-center text-white" style={{fontSize:"22px" , fontFamily:"Sahel-Bold"}}>دسته بندی محصولات</div>
 
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_playStation} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
+                        {
+                            allCategories.map((category , index)=>(
 
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>پلی استیشن</div>
+                                <div key={index} className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
 
-                        </div>
+                                    <Link to={`/category-product/${category.nameCategory}`} className="text-decoration-none">
 
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_Xbox} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
+                                        <div className="box-ax-category">
+                                            <img src={category.imageCategory} alt="" className="col-lg-12 col-12 col-sm-12"/>
+                                        </div>
 
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>ایکس باکس</div>
-
-                        </div>
-
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_windows} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
-
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>ویندوز</div>
-
-                        </div>
+                                        <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>{category.nameCategory}</div>
 
 
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_IOS} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
+                                    </Link>
 
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>بازی های IOS</div>
+                                </div>
 
-                        </div>
-
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_stim} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
-
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>استیم</div>
-
-                        </div>
-
-
-                        <div className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
-                            <div className="box-ax-category">
-                                <img src={logo_origin} alt="" className="col-lg-12 col-12 col-sm-12"/>
-                            </div>
-
-                            <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>اوریجین</div>
-
-                        </div>
+                            ))
+                        }
 
 
                     </div>
