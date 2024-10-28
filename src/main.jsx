@@ -17,6 +17,8 @@ import SingleArticle from "./pages/SingleArticle";
 import Store from "./pages/Store";
 import Panel from "./pages/admin/Panel";
 import 'react-confirm-alert/src/react-confirm-alert.css';
+import SearchResult from "./pages/SearchResult";
+import ResultSearch from "./component/search/ResultSearch";
 
 
 const router = createBrowserRouter([
@@ -84,6 +86,11 @@ const router = createBrowserRouter([
             {
                 path: "/store" ,
                 element: <Store/>
+            },
+
+            {
+                path: "/search" ,
+                element: <SearchResult/>
             }
 
         ]

@@ -1,4 +1,5 @@
-import {Link} from "react-router-dom";
+import search from '../../assets/img/search.png';
+import {Link , useNavigate} from "react-router-dom";
 // import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
@@ -22,6 +23,24 @@ const Navbar = ()=>{
         fetchData();
 
     } , []);
+
+
+
+
+    const [query , setQuery] = useState('');
+
+    const navigate = useNavigate();
+
+    const handleSearch = ()=>{
+
+        if (query.trim()){
+            navigate(`/search?query=${query}`);
+            setQuery('');
+        }
+
+    }
+
+
 
     return(
 
@@ -61,16 +80,16 @@ const Navbar = ()=>{
                            </ul>
 
 
-                           <div style={{display:"flex" , alignItems:"center"}} className="ms-lg-2 ms-3 mt-lg-0 mt-4">
+                           <div className="box-search mt-lg-0 mt-2">
 
-                               <div className="search">
-                                   <input type="text" className="input" placeholder="جست و جو"/>
+                               <div className="docme-search">
+                                   <button onClick={handleSearch} style={{width:"40px" , height:"40px" , backgroundColor:"transparent" , border:"none"}}>
+                                       <img src={search} alt="" className="col-lg-12 col-12" style={{marginTop:"-4px"}}/>
+                                   </button>
+                               </div>
 
-                                   <div className="docme">
-                                       <i className="fas fa-search zarebin text-white" style={{fontSize:"22px" , paddingRight:"15px" , marginLeft:"23px"}}> </i>
-                                       {/*<FaSearch className="zarebin text-white" style={{fontSize:"22px"}}/>*/}
-                                   </div>
-
+                               <div className="box-input">
+                                   <input type="text" value={query} onChange={(e)=>setQuery(e.target.value)} name="" className="input" placeholder="جست و جو"/>
                                </div>
 
                            </div>

@@ -50,7 +50,6 @@ const ProductCategories = ()=>{
 
                                         <div className="col-lg-12 m-lg-auto mt-lg-3 text-lg-center text-white col-12 m-auto text-center col-sm-12 m-sm-auto text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>{category.nameCategory}</div>
 
-
                                     </Link>
 
                                 </div>

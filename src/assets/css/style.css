@@ -39,23 +39,45 @@ body{
 }
 
 
+.box-search{
+    width: 275px;
+    height: 40px;
+    background-color: #a04cff;
+    margin-left: 45px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
 
-.search{
-    height: 35px;
-    position: relative;
+
+.docme-search{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+
+
+.box-input{
+    width: 235px;
+    height: 40px;
+    background-color: transparent;
 }
 
 
 .input{
-    width: 0;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: none;
-    padding-right: 50px;
-    font-size: 16px;
-    font-family: yekan;
     outline: none;
-    transition: width 1s ease;
+    padding-right: 10px;
+    font-size: 15px;
+    font-family: Yekan;
+    color: white;
 }
 
 
