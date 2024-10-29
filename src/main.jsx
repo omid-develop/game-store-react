@@ -18,7 +18,8 @@ import Store from "./pages/Store";
 import Panel from "./pages/admin/Panel";
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import SearchResult from "./pages/SearchResult";
-import ResultSearch from "./component/search/ResultSearch";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 
 const router = createBrowserRouter([
@@ -100,6 +101,16 @@ const router = createBrowserRouter([
     {
         path: "/admin/panel" ,
         element: <Panel/>
+    },
+
+    {
+        path: "/register" ,
+        element: <RegisterPage/>
+    },
+
+    {
+        path:"/login" ,
+        element:<LoginPage/>
     }
 
 ])
