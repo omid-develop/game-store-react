@@ -1,14 +1,17 @@
 import search from '../../assets/img/search.png';
-import {Link , useNavigate} from "react-router-dom";
-// import { FaSearch } from "react-icons/fa";
+import {Link, useNavigate} from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import {useState , useEffect} from "react";
 import {getAllMenu} from "../../services/services_menu";
+import {useAuth} from "../../../AuthContext";
+
 
 const Navbar = ()=>{
 
     const [menu , setMenu] = useState([]);
+
+const {user}= useAuth();
 
     useEffect(()=>{
 
@@ -25,8 +28,6 @@ const Navbar = ()=>{
     } , []);
 
 
-
-
     const [query , setQuery] = useState('');
 
     const navigate = useNavigate();
@@ -39,7 +40,7 @@ const Navbar = ()=>{
         }
 
     }
-
+    console.log(user)
 
 
     return(
@@ -102,7 +103,31 @@ const Navbar = ()=>{
 
                            <div style={{display:"flex" , alignItems:"center"}} className="ms-lg-2 ms-3 mt-lg-0 mt-3">
                                {/*<i className="fas fa-shopping-cart ms-4 text-white" style="font-size: 22px"></i>*/}
-                               <FaUser className="ms-4 text-white" style={{fontSize:"22px"}}/>
+
+                               {/*{*/}
+                               {/*    getUser ? (*/}
+                               {/*        <h1>{getUser}</h1>*/}
+                               {/*    )*/}
+                               {/*        :*/}
+                               {/*        <FaUser className="ms-4 text-white" style={{fontSize:"22px"}}/>*/}
+                               {/*}*/}
+
+                               {/*{*/}
+                               {/*    user && <span className="text-warning">{user.user_metadata.full_name}</span>}*/}
+                               {/*{!user &&<FaUser className="ms-4 text-white" style={{fontSize:"22px"}}/>*/}
+                               {/*}*/}
+
+                               {
+                                   user == null ? (
+                                       <Link to={"/register"}>
+                                           <FaUser className="ms-4 text-white" style={{fontSize:"22px"}}/>
+                                       </Link>
+                                   ) : (
+                                       <span className="text-warning" style={{fontSize:"14px" , fontFamily:"Sahel-Bold"}}> {user.user_metadata.full_name}</span>
+                                   )
+                               }
+
+
                            </div>
 
 

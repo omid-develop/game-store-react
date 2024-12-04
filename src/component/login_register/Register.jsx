@@ -1,6 +1,52 @@
 import {Link} from "react-router-dom";
+import {useState} from "react";
+
+import {useNavigate} from "react-router-dom";
+import {supabase} from "../../../supabaseClient";
+
 
 const Register = ()=>{
+
+    const [email , setEmail] = useState("");
+    const [password , setPassword] = useState("");
+    const [fullName , setFullName] = useState("");
+
+    const navigate = useNavigate();
+
+    const signUp = async (email , password)=>{
+
+        // let { data, error } = await supabase.auth.signUp(
+        //     {
+        //     email: email,
+        //     password: password,
+        //     options:{
+        //         data:{
+        //             fullName:name,
+        //         }
+        //     }
+        // });
+        let { data, error } = await supabase.auth.signUp({
+            email,
+            password,  options: {
+                data: {
+                    full_name: fullName,
+                },
+            }
+        })
+        console.log(data , error);
+        return {data , error};
+
+    }
+
+    const formSubmit = (event)=>{
+
+        event.preventDefault();
+        signUp(email , password);
+
+        navigate("/");
+
+    }
+
 
     return(
 
@@ -20,16 +66,21 @@ const Register = ()=>{
                            <form method="post" style={{fontSize:"16px" , fontFamily:"yekan"}}>
 
                                <div className="mt-4">
+                                   <label className="form-label text-white">نام کاربری</label>
+                                   <input value={fullName} onChange={(e)=>setFullName(e.target.value)} type="text" className="form-control"/>
+                               </div>
+
+                               <div className="mt-4">
                                    <label className="form-label text-white">پست الکترونیک</label>
-                                   <input type="email" className="form-control"/>
+                                   <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control"/>
                                </div>
 
                                <div className="mt-4">
                                    <label className="form-label text-white">کلمه عبور</label>
-                                   <input type="password" className="form-control"/>
+                                   <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password" className="form-control"/>
                                </div>
 
-                               <Link to={""} className="btn mt-lg-4 d-lg-block m-lg-auto col-lg-9 col-9 d-block m-auto mt-4 text-white" style={{fontFamily:"yekan" , backgroundColor:"#430090"}}>ثبت نام</Link>
+                               <button onClick={formSubmit} className="btn mt-lg-4 d-lg-block m-lg-auto col-lg-9 col-9 d-block m-auto mt-4 text-white" style={{fontFamily:"yekan" , backgroundColor:"#430090"}}>ثبت نام</button>
 
                                <p className="mt-lg-4 d-lg-block m-lg-auto col-lg-9 d-block m-auto mt-4 text-white text-center" style={{fontFamily:"yekan"}}>قبلا ثبت نام کرده اید ؟
 

@@ -5,6 +5,7 @@ import SelectedGames from "./component/home/SelectedGames";
 import InstantDiscounts from "./component/home/InstantDiscounts";
 import Articles from "./component/home/Articles";
 
+
 const App = ()=>{
 
     return(
