@@ -15,16 +15,6 @@ const Register = ()=>{
 
     const signUp = async (email , password)=>{
 
-        // let { data, error } = await supabase.auth.signUp(
-        //     {
-        //     email: email,
-        //     password: password,
-        //     options:{
-        //         data:{
-        //             fullName:name,
-        //         }
-        //     }
-        // });
         let { data, error } = await supabase.auth.signUp({
             email,
             password,  options: {

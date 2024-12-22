@@ -27,7 +27,7 @@ const Category = ()=>{
             <div className="container-fluid mt-lg-5 mt-5 box-categories pt-lg-4 pb-lg-4 p-4 pb-4">
                 <div className="container" style={{height:"100%" , maxWidth:"1210px"}}>
 
-                    <div className="row">
+                    <div className="row mt-lg-3">
 
                         <div className="col-lg-6 d-lg-flex justify-content-lg-center align-items-lg-center col-6 d-flex justify-content-center align-items-center">
                             <div className="col-lg-12 col-12 font-category text-white" style={{fontSize:"23px" , fontFamily:"Sahel-Bold"}}>دسته بندی ها</div>
@@ -42,7 +42,7 @@ const Category = ()=>{
                     </div>
 
 
-                    <div className="row mt-lg-1">
+                    <div className="row mt-lg-4">
 
                         {
                             allCategory.map((category , index)=>(

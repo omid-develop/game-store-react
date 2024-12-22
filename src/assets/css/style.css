@@ -23,6 +23,18 @@
 
 body{
     background-color: #070e1c;
+    overflow-x: hidden;
+}
+
+
+.view-cart{
+    height: 700px;
+    position: absolute;
+    background-color: #123456;
+    z-index: 100;
+    top: 0;
+    font-family: Sahel-Bold;
+    color: white;
 }
 
 
@@ -1056,4 +1068,71 @@ body{
     text-align: center;
     font-size: 17px;
     font-family: Yekan;
+}
+
+
+.hover_item{
+    transition: background-color 0.5s;
+    border-radius: 10px;
+    color: white;
+}
+
+.hover_item:hover{
+    background-color: red;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 454px){
+    .hover_item:hover{
+        background-color: transparent;
+    }
+}
+
+
+@media (max-width: 454px){
+    .cart_mobile{
+        display: none;
+    }
+}
+
+
+.hide_show{
+    animation: hideShow 15s infinite;
+}
+
+@keyframes hideShow {
+    0%{
+        opacity: 1;
+        color: red;
+    }
+
+    20%{
+        color: lightgreen;
+    }
+
+    40%{
+        opacity: 1;
+        color: lime;
+    }
+
+    60%{
+        opacity: 1;
+        color: deepskyblue;
+    }
+
+    100%{
+        opacity: 1;
+        color: #ff6c00;
+    }
+}
+
+
+
+@media (max-width: 454px){
+    .text-search{
+        font-size: 19px;
+        text-align: center;
+        margin-top: 35px;
+    }
 }

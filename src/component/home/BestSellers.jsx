@@ -39,7 +39,7 @@ const BestSellers = ()=>{
                     </div>
 
 
-                    <div className="row mt-lg-3 mt-3">
+                    <div className="row mt-lg-4 mt-4">
 
                         <div className="box-bestSellers">
 

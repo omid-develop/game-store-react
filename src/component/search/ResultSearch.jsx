@@ -1,4 +1,4 @@
-import {Link, useLocation , useNavigate} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {useState , useEffect} from "react";
 import {getAllProducts} from "../../services/services_products";
 import game1 from "../../assets/img/game1.webp";
@@ -8,8 +8,6 @@ const useQuery = ()=>{
 }
 
 const ResultSearch = ()=>{
-
-    const navigate = useNavigate();
 
     const query = useQuery().get('query');
     const [allProduct , setAllProduct] = useState([]);
@@ -67,8 +65,8 @@ const ResultSearch = ()=>{
                                 (
                                     <>
 
-                                        <h2 className="text-lg-center text-warning mt-lg-5" style={{fontFamily:"yekan"}}>محصول مورد نظر یافت نشد !</h2>
-                                        <button className="btn btn-warning col-lg-2 m-lg-auto mt-lg-5" style={{fontFamily:"yekan"}}>بازگشت به صفحه اصلی</button>
+                                        <h2 className="text-lg-center text-warning mt-lg-5 text-search" style={{fontFamily:"yekan"}}>محصول مورد نظر یافت نشد !</h2>
+                                        <Link to={"/"} className="btn btn-warning col-lg-2 col-5 m-lg-auto m-auto mt-lg-5 mt-5" style={{fontFamily:"yekan"}}>بازگشت به صفحه اصلی</Link>
 
                                     </>
                                 )

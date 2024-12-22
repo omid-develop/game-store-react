@@ -1,6 +1,7 @@
 import game from '../../assets/img/game.webp';
 import zare from '../../assets/img/zare.png';
 
+
 const IntroductionSite = ()=>{
 
     return(
@@ -13,7 +14,7 @@ const IntroductionSite = ()=>{
 
                         <div className="col-lg-6 col-12 col-sm-12 col-md-12">
 
-                            <div className="col-lg-12 m-lg-auto mt-lg-5 text-lg-center col-12 col-sm-12 col-md-12 m-auto m-sm-auto m-md-auto text-center text-md-center text-sm-center mt-4 mt-sm-4 mt-md-4 text-white" style={{fontSize:"30px" , fontFamily:"Sahel-Bold"}}>معرفی فروشگاه فروش بازی امید</div>
+                            <div className="col-lg-12 hide_show m-lg-auto mt-lg-5 text-lg-center col-12 col-sm-12 col-md-12 m-auto m-sm-auto m-md-auto text-center text-md-center text-sm-center mt-4 mt-sm-4 mt-md-4" style={{fontSize:"30px" , fontFamily:"Sahel-Bold"}}>معرفی فروشگاه فروش بازی امید</div>
 
                             <div className="col-lg-12 m-lg-auto mt-lg-4 col-12 col-sm-12 col-md-12 m-auto m-sm-auto m-md-auto text-lg-end text-center text-sm-end text-md-end mt-4 mt-sm-4 mt-md-4 text-white" style={{fontSize:"18px" , fontFamily:"yekan"}}>در سایت ما انواع بازی های مختلف ، اعم از ، بازی برای کامپیوتر ، پلی استیشن ، ایکس باکس و ... منتشر می شود و شما می توانید این بازی ها را با بهترین و ارزان ترین قیمت خریداری نمایید .</div>
 

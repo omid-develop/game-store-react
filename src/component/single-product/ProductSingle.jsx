@@ -2,6 +2,7 @@ import game1 from '../../assets/img/game1.webp';
 import {useState , useEffect} from "react";
 import {getProduct} from "../../services/services_products";
 import {useParams} from "react-router-dom";
+import {toast, ToastContainer} from "react-toastify";
 
 
 const ProductSingle = ()=>{
@@ -21,6 +22,11 @@ const ProductSingle = ()=>{
         fetchData();
 
     } , []);
+
+
+    const cartClick = ()=>{
+        toast.error("در حال حاضر امکان خرید محصول وجود ندارد !");
+    }
 
 
     return(
@@ -51,7 +57,7 @@ const ProductSingle = ()=>{
                                 <div className="col-lg-12 m-lg-auto mt-lg-5 text-lg-center text-white col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-4 text-sm-center col-md-12 m-md-auto mt-md-4 text-md-center" style={{fontSize:"20px" , fontFamily:"Sahel-Bold"}}>قیمت : {games.discount !== "ندارد" ? games.discount : games.price} تومان</div>
 
                                 <div className="col-lg-12 m-lg-auto mt-lg-5 text-lg-center col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-4 text-sm-center col-md-12 m-md-auto mt-md-4 text-md-center" style={{fontSize:"19px" , fontFamily:"yekan"}}>
-                                    <button className="btn col-lg-10 text-white col-10 col-sm-10 col-md-10" style={{padding:"9px 0" , backgroundColor:"#a04cff"}}>افزودن به سبد خرید</button>
+                                    <button onClick={cartClick} className="btn col-lg-10 text-white col-10 col-sm-10 col-md-10" style={{padding:"9px 0" , backgroundColor:"#a04cff"}}>افزودن به سبد خرید</button>
                                 </div>
 
                                 <div className="col-lg-12 m-lg-auto mt-lg-5 text-lg-center text-white col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-4 text-sm-center col-md-12 m-md-auto mt-md-4 text-md-center" style={{fontSize:"19px" , fontFamily:"Sahel-Bold"}}>دسته بندی : {games.category}</div>
@@ -64,6 +70,20 @@ const ProductSingle = ()=>{
 
                 </div>
             </div>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                transition: Bounce
+            />
 
         </>
 

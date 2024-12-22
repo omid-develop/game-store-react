@@ -4,8 +4,11 @@ import {useState} from "react";
 import EditMenu from "./EditMenu";
 import AddMenu from "./AddMenu";
 import DeleteMenu from "./DeleteMenu";
+import {useNavigate} from "react-router-dom";
 
 const ViewMenu = ({allMenu})=>{
+
+    const navigate = useNavigate();
 
     const [openModal , setOpenModal] = useState(false);
     const [editModal , setEditModal] = useState(false);
@@ -37,7 +40,7 @@ const ViewMenu = ({allMenu})=>{
 
                 <button onClick={()=>setOpenModal(true)} className="btn col-lg-3" style={{fontSize:"16px" , fontFamily:"yekan" , backgroundColor:"green" , color:"white"}}>ایجاد آیتم جدید</button>
 
-                <button className="btn btn-warning me-lg-5" style={{fontSize:"16px" , fontFamily:"yekan"}}>ورود به مستقیم به سایت</button>
+                <button onClick={()=>navigate("/")} className="btn btn-warning me-lg-5" style={{fontSize:"16px" , fontFamily:"yekan"}}>ورود به مستقیم به سایت</button>
 
             </div>
 

@@ -40,7 +40,7 @@ const ProductCategories = ()=>{
                         {
                             allCategories.map((category , index)=>(
 
-                                <div key={index} className="col-lg-2 mt-lg-4 col-4 mt-4 col-sm-3 mt-sm-4">
+                                <div key={index} className="col-lg-2 mt-lg-5 col-4 mt-4 col-sm-3 mt-sm-4">
 
                                     <Link to={`/category-product/${category.nameCategory}`} className="text-decoration-none">
 

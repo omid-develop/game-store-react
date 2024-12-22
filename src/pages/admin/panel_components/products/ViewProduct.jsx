@@ -6,8 +6,11 @@ import AddProduct from "./AddProduct";
 import EditProduct from "./EditProduct";
 import FullProductInformation from "./ّFullProductInformation";
 import DeleteProduct from "./DeleteProduct";
+import {useNavigate} from "react-router-dom";
 
 const ViewProduct = ({products})=>{
+
+    const navigate = useNavigate();
 
     const [openModal , setOpenModal] = useState(false);
     const [editModal , setEditModal] = useState(false);
@@ -51,7 +54,7 @@ const ViewProduct = ({products})=>{
 
                 <button onClick={()=>setOpenModal(true)} className="btn col-lg-3" style={{fontSize:"16px" , fontFamily:"yekan" , backgroundColor:"green" , color:"white"}}>ایجاد محصول جدید</button>
 
-                <button className="btn btn-warning me-lg-5" style={{fontSize:"16px" , fontFamily:"yekan"}}>ورود به مستقیم به سایت</button>
+                <button onClick={()=>navigate("/")} className="btn btn-warning me-lg-5" style={{fontSize:"16px" , fontFamily:"yekan"}}>ورود به مستقیم به سایت</button>
 
             </div>
 

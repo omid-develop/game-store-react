@@ -10,6 +10,7 @@ import {useAuth} from "../../../AuthContext";
 const Navbar = ()=>{
 
     const [menu , setMenu] = useState([]);
+    const [viewCart , setViewCart] = useState(false);
 
 const {user}= useAuth();
 
@@ -40,14 +41,41 @@ const {user}= useAuth();
         }
 
     }
-    console.log(user)
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    };
+
+
+    console.log(user);
+
+
+    const openViewCart = (event)=>{
+        event.stopPropagation();
+        setViewCart(true);
+    }
+
+    useEffect(()=>{
+        document.addEventListener("click" , closeViewCart);
+
+        return () => {
+            // حذف رویداد هنگام از بین رفتن کامپوننت
+            document.removeEventListener('click', closeViewCart);
+        };
+    } , []);
+
+    const closeViewCart = ()=>{
+        setViewCart(false);
+    }
 
 
     return(
 
         <>
 
-           <nav className="navbar navbar-expand-lg fixed-top pt-lg-3 pb-lg-3" style={{zIndex:"100" , backgroundColor:"#001728"}}>
+           <nav className="navbar navbar-expand-lg fixed-top pt-lg-3 pb-lg-3 pe-lg-4 ps-lg-4" style={{zIndex:"100" , backgroundColor:"#001728"}}>
 
                <div className="container-fluid">
 
@@ -57,7 +85,7 @@ const {user}= useAuth();
                        <span className="navbar-toggler-icon"> </span>
                    </button>
 
-                   <div className="offcanvas offcanvas-end" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{backgroundColor:"navy"}}>
+                   <div className="offcanvas offcanvas-end" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{backgroundColor:"#123456"}}>
 
                        <div className="offcanvas-header">
                            <h5 className="offcanvas-title text-white" id="offcanvasNavbarLabel" style={{fontFamily:"Sahel-Bold"}}>فروشگاه فروش بازی</h5>
@@ -71,7 +99,7 @@ const {user}= useAuth();
                                {
                                    menu.map((option , index)=>(
 
-                                       <li key={index} className="nav-item me-lg-3 me-2">
+                                       <li key={index} className="nav-item hover_item me-lg-3 me-2">
                                            <Link to={option.url_item} className="nav-link active text-white" aria-current="page" href="#">{option.nameItem}</Link>
                                        </li>
 
@@ -90,32 +118,26 @@ const {user}= useAuth();
                                </div>
 
                                <div className="box-input">
-                                   <input type="text" value={query} onChange={(e)=>setQuery(e.target.value)} name="" className="input" placeholder="جست و جو"/>
+                                   <input type="text" value={query} onChange={(e)=>setQuery(e.target.value)} onKeyDown={handleKeyPress} name="" className="input" placeholder="جست و جو"/>
                                </div>
 
                            </div>
 
 
-                           <div style={{display:"flex" , alignItems:"center"}} className="ms-lg-2 ms-3 mt-lg-0 mt-3">
-                               {/*<i className="fas fa-shopping-cart ms-4 text-white" style="font-size: 22px"></i>*/}
-                               <FaShoppingCart className="ms-4 text-white" style={{fontSize:"22px"}}/>
+                           <div onClick={(e) => e.stopPropagation()} style={{display:"flex" , alignItems:"center"}} className="ms-lg-2 ms-3 mt-lg-0 mt-3">
+                               <button onClick={openViewCart} className="bg-transparent cart_mobile" style={{border:"none"}}>
+                                   <FaShoppingCart className="ms-4 text-white" style={{fontSize:"22px"}}/>
+                               </button>
+
+                               <div className="col-lg-2 view-cart transition cart_mobile" style={{left: viewCart ? 0 : `-500px` , transition:"left 0.5s ease"}}>
+
+                                   <div className="col-lg-11 m-lg-auto mt-lg-4" style={{fontSize:"15px"}}>در حال حاضر سبد خرید شما خالی است . </div>
+
+                               </div>
+
                            </div>
 
                            <div style={{display:"flex" , alignItems:"center"}} className="ms-lg-2 ms-3 mt-lg-0 mt-3">
-                               {/*<i className="fas fa-shopping-cart ms-4 text-white" style="font-size: 22px"></i>*/}
-
-                               {/*{*/}
-                               {/*    getUser ? (*/}
-                               {/*        <h1>{getUser}</h1>*/}
-                               {/*    )*/}
-                               {/*        :*/}
-                               {/*        <FaUser className="ms-4 text-white" style={{fontSize:"22px"}}/>*/}
-                               {/*}*/}
-
-                               {/*{*/}
-                               {/*    user && <span className="text-warning">{user.user_metadata.full_name}</span>}*/}
-                               {/*{!user &&<FaUser className="ms-4 text-white" style={{fontSize:"22px"}}/>*/}
-                               {/*}*/}
 
                                {
                                    user == null ? (

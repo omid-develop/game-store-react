@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 const Footer = ()=>{
 
     return(
@@ -40,11 +42,9 @@ const Footer = ()=>{
 
                             <div className="col-lg-11 m-lg-auto mt-lg-4 col-12 m-sm-auto mt-sm-4">
 
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>وبلاگ</a>
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>درباره ما</a>
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>فروشگاه</a>
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>تماس با ما</a>
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>راهنمای خرید</a>
+                                <Link to={""} className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>وبلاگ</Link>
+                                <Link to={"/about-us"} className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>درباره ما</Link>
+                                <Link to={"/contact-us"} className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>تماس با ما</Link>
 
                             </div>
 
@@ -57,9 +57,9 @@ const Footer = ()=>{
 
                             <div className="col-lg-11 m-lg-auto mt-lg-4 col-12 m-auto mt-4 col-sm-12 m-sm-auto mt-sm-4">
 
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>نحوه ثبت سفارش</a>
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>رویه ثبت سفارش</a>
-                                <a href="#" className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>رویه های بازگرداندن کالا</a>
+                                <Link to={"/order-registration-procedure"} className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>نحوه ثبت سفارش</Link>
+                                <Link to={"/returning-product"} className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>رویه های بازگرداندن کالا</Link>
+                                <Link to={"/order-sending-procedure"} className="col-lg-11 m-lg-auto d-lg-block text-decoration-none mt-lg-4 col-12 m-auto d-block mt-4 col-sm-12 m-sm-auto d-sm-block mt-sm-4 text-lg-end text-center text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan" , color:"#7293a7"}}>رویه های ارسال محصول</Link>
 
                             </div>
 
