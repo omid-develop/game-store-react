@@ -45,7 +45,7 @@ const ProductSingle = ()=>{
                             <div className="col-lg-6 float-lg-end col-12 col-sm-12 col-md-6 float-md-end">
 
                                 <div className="col-lg-11 m-lg-auto col-12 m-auto col-sm-12 m-sm-auto col-md-11 m-md-auto">
-                                    <img src={game1} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12"/>
+                                    <img src={games.image} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12"/>
                                 </div>
 
                             </div>

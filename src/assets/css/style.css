@@ -206,6 +206,7 @@ body{
     background-color: transparent;
     float: right;
     margin-right: 10px;
+    padding-right: 10px;
     margin-top: 11px;
     font-size: 16px;
     font-family: Yekan;
@@ -222,6 +223,7 @@ body{
     margin-right: 10px;
     margin-top: 13px;
     color: white;
+    padding-right: 10px;
 }
 
 
@@ -257,6 +259,7 @@ body{
     float: right;
     margin-right: 10px;
     margin-top: 10px;
+    padding-right: 10px;
     font-size: 16px;
     font-family: Yekan;
     color: white;

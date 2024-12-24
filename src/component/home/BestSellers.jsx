@@ -49,7 +49,9 @@ const BestSellers = ()=>{
                                     <div key={index} className="box-forush">
 
                                         <Link to={`/single-product/${product.id}`}>
-                                            <div className="ax-game"> </div>
+                                            <div className="ax-game">
+                                                <img src={product.image} alt={""} width={130} height={130} style={{borderRadius:"10px"}}/>
+                                            </div>
 
                                             <div className="title-game">{product.nameProduct}</div>
 
@@ -59,7 +61,7 @@ const BestSellers = ()=>{
                                                     product.discount !== "ندارد" ? (
                                                             <>
                                                                 <div className="price-game" style={{textDecoration: 'line-through'}}>{product.price} تومان </div>
-                                                                <div className="discount-game"> تخفیف : {product.discount}</div>
+                                                                <div className="discount-game"> تخفیف : <span style={{color:"#a04cff"}}>{product.discount}</span></div>
                                                             </>
                                                         )
                                                         :
@@ -73,7 +75,7 @@ const BestSellers = ()=>{
 
                                             </div>
 
-                                            <div className="name-system">طراحی شده برای : <span>{product.category}</span></div>
+                                            <div className="name-system">طراحی شده برای : <span style={{color:"#a04cff"}}>{product.category}</span></div>
 
                                         </Link>
 

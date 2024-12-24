@@ -16,7 +16,7 @@ const SelectedGames = ()=>{
             const data = response.data;
             const AllProduct = data.sort((a , b)=> a.price - b.price).slice(0 , 4);
             setSelectGames(AllProduct);
-            // console.log(AllProduct);
+            console.log(AllProduct);
 
         }
 
@@ -51,7 +51,7 @@ const SelectedGames = ()=>{
                                         <Link to={`/single-product/${game.id}`} class="text-decoration-none">
                                             <div className="col-lg-12 m-lg-auto pb-lg-4 col-12 m-auto pb-4 col-sm-12 m-sm-auto pb-sm-4 col-md-12 m-md-auto pb-md-4" style={{backgroundColor:"#1c2235" , borderRadius:"17px"}}>
 
-                                                <img src={game1} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopRightRadius:"17px" , borderTopLeftRadius:"17px"}}/>
+                                                <img src={game.image} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopRightRadius:"17px" , borderTopLeftRadius:"17px"}}/>
                                                 <div className="col-lg-12 m-lg-auto mt-lg-3 text-white text-lg-center col-12 m-auto mt-3 text-center col-sm-12 m-sm-auto mt-sm-3 text-sm-center col-md-12 m-md-auto mt-md-3 text-md-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>{game.nameProduct}</div>
                                                 <div className="col-lg-12 m-lg-auto mt-lg-3 text-white text-lg-center col-12 m-auto mt-3 text-center col-sm-12 m-sm-auto mt-sm-3 text-sm-center col-md-12 m-md-auto mt-md-3 text-md-center" style={{fontSize:"16px" , fontFamily:"yekan"}}>{ game.discount !== "ندارد" ? game.discount : game.price } تومان</div>
                                             </div>

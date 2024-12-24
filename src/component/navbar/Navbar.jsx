@@ -79,7 +79,7 @@ const {user}= useAuth();
 
                <div className="container-fluid">
 
-                   <Link to="/" className="navbar-brand text-white" style={{fontSize:"18px" , fontFamily:"Sahel-Bold"}}>فروشگاه فروش بازی</Link>
+                   <Link to="/" className="navbar-brand text-warning" style={{fontSize:"18px" , fontFamily:"Sahel-Bold"}}>فروشگاه فروش بازی</Link>
 
                    <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style={{backgroundColor:"white"}}>
                        <span className="navbar-toggler-icon"> </span>

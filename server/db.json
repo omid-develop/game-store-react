@@ -7,7 +7,7 @@
       "discount": "100000",
       "sales": "24",
       "category": "پلی استیشن",
-      "image": "",
+      "image": "../src/assets/img/fifa.png",
       "id": 1
     },
     {
@@ -17,7 +17,7 @@
       "discount": "70000",
       "sales": "15",
       "category": "ایکس باکس",
-      "image": "",
+      "image": "../src/assets/img/pes.png",
       "id": 2
     },
     {
@@ -27,7 +27,7 @@
       "discount": "99000",
       "sales": "28",
       "category": "ویندوز",
-      "image": "",
+      "image": "../src/assets/img/GTI.png",
       "id": 3
     },
     {
@@ -37,7 +37,7 @@
       "discount": "96000",
       "sales": "14",
       "category": "استیم",
-      "image": "",
+      "image": "../src/assets/img/GTAV.png",
       "id": 4
     },
     {
@@ -47,7 +47,7 @@
       "discount": "ندارد",
       "sales": "21",
       "category": "استیم",
-      "image": "",
+      "image": "../src/assets/img/EldenRing.png",
       "id": 5
     },
     {
@@ -57,7 +57,7 @@
       "discount": "ندارد",
       "sales": "12",
       "category": "استیم",
-      "image": "",
+      "image": "../src/assets/img/helldivers.png",
       "id": 6
     },
     {
@@ -67,7 +67,7 @@
       "discount": "ندارد",
       "sales": "4",
       "category": "بازی های IOS",
-      "image": "",
+      "image": "../src/assets/img/boxville.png",
       "id": 7
     },
     {
@@ -77,7 +77,7 @@
       "discount": "90000",
       "sales": "17",
       "category": "اوریجین",
-      "image": "",
+      "image": "../src/assets/img/anthem.png",
       "id": 8
     },
     {
@@ -87,7 +87,7 @@
       "discount": "110000",
       "sales": "18",
       "category": "اوریجین",
-      "image": "",
+      "image": "../src/assets/img/global.png",
       "id": 9
     }
   ],
