@@ -1,10 +1,10 @@
 import {useNavigate} from "react-router-dom";
 import {FiEdit} from "react-icons/fi";
-import {FaEye} from "react-icons/fa";
 import {RiDeleteBin3Fill} from "react-icons/ri";
 import {useState} from "react";
 import AddArticle from "./AddArticle";
 import EditArticle from "./EditArticle";
+import DeleteArticle from "./DeleteArticle";
 
 const ViewArticle = ({articles})=>{
 
@@ -13,10 +13,18 @@ const ViewArticle = ({articles})=>{
     const [openModal , setOpenModal] = useState(false);
     const [editModal , setEditModal] = useState(false);
     const [idModal , setIdModal] = useState("");
+    const [deleteModal , setDeleteModal] = useState(false);
 
     const ModalId = (id)=>{
 
         setEditModal(true);
+        setIdModal(id);
+
+    }
+
+    const DeleteModalId = (id)=>{
+
+        setDeleteModal(true);
         setIdModal(id);
 
     }
@@ -53,13 +61,7 @@ const ViewArticle = ({articles})=>{
 
                         </button>
 
-                        <button className="btn">
-
-                            <FaEye style={{fontSize:"29px" , color:"blue"}}/>
-
-                        </button>
-
-                        <button className="btn">
+                        <button onClick={()=>DeleteModalId(article.id)} className="btn">
 
                             <RiDeleteBin3Fill style={{fontSize:"29px" , color:"red"}}/>
 
@@ -78,6 +80,10 @@ const ViewArticle = ({articles})=>{
 
             {
                 editModal ? <EditArticle idModal={idModal} closeModal={()=>setEditModal(false)}/> : null
+            }
+
+            {
+                deleteModal ? <DeleteArticle idModal={idModal} closeModal={()=>setDeleteModal(false)}/> : null
             }
 
 

@@ -1,5 +1,6 @@
 import {useState , useEffect} from "react";
 import {getArticle, updateArticle} from "../../../../services/services_article";
+import {toast} from "react-toastify";
 
 const EditArticle = ({idModal , closeModal})=>{
 
@@ -40,6 +41,7 @@ const EditArticle = ({idModal , closeModal})=>{
             console.log(response.data);
             setEditArticle({});
             closeModal(true);
+            toast.warning("مقاله با موفقیت ویرایش شد . ")
 
         }
 

@@ -1,7 +1,4 @@
 import game1 from '../../assets/img/game1.webp';
-import game2 from '../../assets/img/game2.webp';
-import game3 from '../../assets/img/game3.webp';
-import game4 from '../../assets/img/game4.webp';
 import {Link, useParams} from "react-router-dom";
 import {useState , useEffect} from "react";
 import {getAllProducts, getProduct} from "../../services/services_products";
@@ -11,6 +8,7 @@ const ProductCategory = ()=>{
     const {categoryName} = useParams();
 
     const [products , setProducts] = useState([]);
+    const [sortedProducts , setSortedProducts] = useState([]);
 
     useEffect(()=>{
 
@@ -24,12 +22,25 @@ const ProductCategory = ()=>{
             const filterProduct = data.filter(product=>product.category === category);
             console.log(filterProduct);
             setProducts(filterProduct);
+            setSortedProducts(filterProduct);
 
         }
 
         fetchData(categoryName);
 
     } , [categoryName]);
+
+
+    const sortSmall = ()=>{
+        const sorted = [...products].sort((a , b)=>parseInt(a.price) - parseInt(b.price));
+        setSortedProducts(sorted);
+    }
+
+    const sortLarge = ()=>{
+        const sorted = [...products].sort((a , b)=>parseInt(b.price) - parseInt(a.price));
+        setSortedProducts(sorted);
+    }
+
 
 
     useEffect(()=>{
@@ -66,9 +77,9 @@ const ProductCategory = ()=>{
 
                                     <div className="col-lg-4 float-lg-end text-lg-center col-4 float-end col-sm-5 float-sm-end col-md-5 float-md-end text-white" style={{fontSize:"15px" , fontFamily:"yekan"}}>مرتب سازی بر اساس :</div>
 
-                                    <div className="col-lg-4 text-center float-lg-end text-lg-center col-4 float-end col-sm-3 float-sm-end col-md-3 float-md-end" style={{fontSize:"16px" , fontFamily:"yekan" , color:"black"}}>گران ترین ها</div>
+                                    <div onClick={sortLarge} className="col-lg-4 text-center float-lg-end text-lg-center col-4 float-end col-sm-3 float-sm-end col-md-3 float-md-end" style={{fontSize:"16px" , fontFamily:"yekan" , color:"black" , cursor:"pointer"}}>گران ترین ها</div>
 
-                                    <div className="col-lg-4 text-center float-lg-end text-lg-center col-4 float-end col-sm-3 float-sm-end col-md-3 float-md-end" style={{fontSize:"16px" , fontFamily:"yekan" , color:"black"}}>ارزان ترین ها</div>
+                                    <div onClick={sortSmall} className="col-lg-4 text-center float-lg-end text-lg-center col-4 float-end col-sm-3 float-sm-end col-md-3 float-md-end" style={{fontSize:"16px" , fontFamily:"yekan" , color:"black" , cursor:"pointer"}}>ارزان ترین ها</div>
 
                                 </div>
 
@@ -77,7 +88,7 @@ const ProductCategory = ()=>{
 
 
                         {
-                            products.map((product , index)=>(
+                            sortedProducts.map((product , index)=>(
 
                                 <div key={index} className="col-lg-3 float-lg-end mt-lg-5 col-10 m-md-0 m-auto mt-4 col-sm-6 float-sm-end mt-sm-4 col-md-4 float-md-end mt-md-4">
 

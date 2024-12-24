@@ -21,6 +21,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 import SearchResult from "./pages/SearchResult";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+import AllArticles from "./pages/AllArticles";
 
 
 const router = createBrowserRouter([
@@ -81,7 +82,12 @@ const router = createBrowserRouter([
             } ,
 
             {
-                path: "/single-article" ,
+              path: "/articles" ,
+                element: <AllArticles/>
+            },
+
+            {
+                path: "/articles/single-article/:id" ,
                 element: <SingleArticle/>
             } ,
 

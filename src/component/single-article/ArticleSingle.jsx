@@ -1,4 +1,26 @@
+import {useEffect , useState} from "react";
+import {getArticle} from "../../services/services_article";
+import {useParams} from "react-router-dom";
+
 const ArticleSingle = ()=>{
+
+    const {id} = useParams();
+
+    const [singleArticle , setSingleArticle] = useState("");
+
+    useEffect(()=>{
+
+        const fetchData = async ()=>{
+
+            const response = await getArticle(id);
+            // console.log(response.data);
+            setSingleArticle(response.data);
+
+        }
+
+        fetchData();
+
+    } , []);
 
     return(
 
@@ -8,37 +30,12 @@ const ArticleSingle = ()=>{
 
                 <div className="container" style={{height:"100%" , maxWidth:"1210px"}}>
 
-                    <div className="col-lg-12 text-white m-lg-auto mt-lg-5 text-lg-end col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-5 text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری
-                        را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-                        صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
-                        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
-                        اساسا مورد استفاده قرار گیرد.
+                    <div className="col-lg-12 m-lg-auto mt-lg-5 text-lg-center col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-5 text-sm-center" style={{fontSize:"20px" , fontFamily:"yekan" , color:"#a04cff"}}>
+                        {singleArticle.name_article}
                     </div>
 
-                    <div className="col-lg-12 text-white m-lg-auto mt-lg-5 text-lg-end col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-5 text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری
-                        را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-                        صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
-                        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
-                        اساسا مورد استفاده قرار گیرد.
-                    </div>
-
-                    <div className="col-lg-12 text-white m-lg-auto mt-lg-5 text-lg-end col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-5 text-sm-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری
-                        را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-                        صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
-                        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
-                        اساسا مورد استفاده قرار گیرد.
+                    <div className="col-lg-12 text-white m-lg-auto mt-lg-5 text-lg-end col-12 m-auto mt-5 text-center col-sm-12 m-sm-auto mt-sm-5 text-sm-center" style={{fontSize:"16px" , fontFamily:"yekan" , lineHeight:"40px"}}>
+                        {singleArticle.text_article}
                     </div>
 
                 </div>

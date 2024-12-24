@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {createArticle} from "../../../../services/services_article";
+import {toast} from "react-toastify";
 
 const AddArticle = ({closeModal})=>{
 
@@ -25,6 +26,7 @@ const AddArticle = ({closeModal})=>{
             console.log(response.data);
             setAddArticle({});
             closeModal(true);
+            toast.success("مقاله با موفقیت ساخته شد . ")
         }
 
     }
