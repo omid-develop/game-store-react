@@ -1,4 +1,6 @@
 import background_time from '../../assets/img/background-time.png';
+import fifa from '../../assets/img/banner-home.png';
+import pes from '../../assets/img/banner-home2.png';
 
 const InstantDiscounts = ()=>{
 
@@ -77,7 +79,7 @@ const InstantDiscounts = ()=>{
 
                         </div>
 
-                        <div className="col-lg-9 float-lg-end col-12 m-lg-0 m-auto mt-lg-0 mt-4">
+                        <div className="col-lg-9 float-lg-end col-12 m-lg-0 m-auto mt-lg-5 mt-4">
 
                             <div className="col-lg-12 m-lg-auto col-12 m-auto mt-lg-2">
 
@@ -86,26 +88,19 @@ const InstantDiscounts = ()=>{
                                     <div className="carousel-indicators">
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"> </button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"> </button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"> </button>
                                     </div>
 
                                     <div className="carousel-inner">
 
                                         <div className="carousel-item active">
 
-                                            <img src="" alt="" className="d-block w-100" style={{height:"300px"}}/>
+                                            <img src={fifa} alt="" className="d-block col-12" style={{borderRadius:"20px"}}/>
 
                                         </div>
 
                                         <div className="carousel-item">
 
-                                            <img src="" alt="" className="d-block w-100" style={{height:"300px"}}/>
-
-                                        </div>
-
-                                        <div className="carousel-item">
-
-                                            <img src="" alt="" className="d-block w-100" style={{height:"300px"}}/>
+                                            <img src={pes} alt="" className="d-block col-12" style={{borderRadius:"20px"}}/>
 
                                         </div>
 

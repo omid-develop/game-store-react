@@ -671,7 +671,6 @@ body{
 
 .banner-categories{
     width: 100%;
-    height: 250px;
     background-color: darkorange;
     margin-top: 56px;
 }
@@ -680,7 +679,6 @@ body{
 
 .banner-category{
     width: 100%;
-    height: 250px;
     background-color: darkorange;
     margin-top: 56px;
 }

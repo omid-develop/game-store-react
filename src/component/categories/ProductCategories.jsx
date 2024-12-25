@@ -1,9 +1,3 @@
-import logo_playStation from '../../assets/img/logo-playStation.png';
-import logo_Xbox from '../../assets/img/logo-Xbox.png';
-import logo_windows from '../../assets/img/logo-windows.png';
-import logo_IOS from '../../assets/img/logo-IOS.png';
-import logo_stim from '../../assets/img/logo-stim.png';
-import logo_origin from '../../assets/img/logo-origin.png';
 import {useState , useEffect} from "react";
 import {getAllCategories} from "../../services/services_category";
 import {Link} from "react-router-dom";

@@ -1,4 +1,4 @@
-import game1 from '../../assets/img/game1.webp';
+import game1 from '../../assets/img/article-xbox.png';
 import {Link} from "react-router-dom";
 import {useState , useEffect} from "react";
 import {getAllArticles} from "../../services/services_article";
@@ -52,7 +52,7 @@ const Articles = ()=>{
 
                                     <div className="col-lg-12 m-lg-auto pb-lg-3 col-12 m-auto pb-3 col-sm-12 m-sm-auto pb-sm-3 col-md-12 m-md-auto pb-md-3" style={{borderRadius:"17px" , backgroundColor:"#151b2d"}}>
 
-                                        <img src={game1} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
+                                        <img src={article.image_article} alt="" className="col-lg-12 col-12 col-sm-12 col-md-12 shadow-lg" style={{borderTopLeftRadius:"17px" , borderTopRightRadius:"17px"}}/>
 
                                         <div className="col-lg-12 p-3 text-white m-lg-auto mt-lg-3 text-lg-center col-12 m-auto mt-3 text-center col-sm-12 m-sm-auto mt-sm-3 text-sm-center col-md-12 m-md-auto mt-md-3 text-md-center" style={{fontSize:"17px" , fontFamily:"yekan"}}>{article.name_article}</div>
                                         <Link to={`articles/single-article/${article.id}`} className="d-lg-block m-lg-auto col-lg-6 col-6 m-auto d-block p-2 text-center mt-2 text-white p-lg-2 text-decoration-none rounded-3 text-lg-center mt-lg-2" style={{backgroundColor:"#a04cff" , fontFamily:"yekan"}}>مشاهده مقاله</Link>

@@ -7,15 +7,15 @@ const Comments = ()=>{
             <div className="container-fluid mt-lg-5 mt-5">
                 <div className="container" style={{height:"100%" , maxWidth:"1210px"}}>
 
-                    <div className="row pt-lg-4 pb-lg-4" style={{backgroundColor:"#151b2d" , borderRadius:"15px"}}>
+                    <div className="row pt-lg-4 pb-lg-4 pt-4 pb-4" style={{backgroundColor:"#151b2d" , borderRadius:"15px"}}>
 
-                        <div className="col-lg-12 m-lg-auto text-lg-center text-white" style={{fontSize:"21px" , fontFamily:"Sahel-Bold"}}>دیدگاه شما</div>
+                        <div className="col-lg-12 m-lg-auto col-12 m-auto  text-lg-center text-white" style={{fontSize:"21px" , fontFamily:"Sahel-Bold"}}>دیدگاه شما</div>
 
                         <div className="col-lg-12 m-lg-auto mt-lg-5">
 
                             <div className="col-lg-6 float-lg-end">
 
-                                <div className="col-lg-11 m-lg-auto" style={{fontSize:"16px" , fontFamily:"yekan"}}>
+                                <div className="col-lg-11 m-lg-auto col-12 m-auto mt-4" style={{fontSize:"16px" , fontFamily:"yekan"}}>
                                     <label className="form-label text-white">نام و نام خانوادگی <span style={{color:"red"}}>*</span></label>
                                     <input type="email" className="form-control"/>
                                 </div>
