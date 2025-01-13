@@ -1,5 +1,5 @@
-import {Link , useNavigate} from "react-router-dom";
-import {useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
 import {supabase} from "../../../supabaseClient";
 
 const Login = ()=> {
@@ -8,6 +8,19 @@ const Login = ()=> {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
+
+
+
+    useEffect(()=>{
+
+        document.body.classList.add('login-page');
+
+        return()=>{
+            document.body.classList.remove('login-page');
+        }
+
+    } , [])
+
 
     const signIn = async (email, password) => {
         try {
@@ -53,7 +66,7 @@ const Login = ()=> {
                             <div className="box-hesab-karbari pt-lg-4 pb-lg-4 pt-4 pb-4">
 
                                 <div className="col-lg-12 m-lg-auto text-lg-center col-12 m-auto text-center text-white" style={{fontSize: "22px", fontFamily: "Sahel-Bold"}}>ورود</div>
-                                <div className="col-lg-12 bg-dark m-lg-auto mt-lg-3 col-12 m-auto mt-3" style={{height: "2px"}}> </div>
+                                <div className="col-lg-12 m-lg-auto mt-lg-3 col-12 m-auto mt-3" style={{height: "2px" , backgroundColor:"#a04cff"}}> </div>
 
 
                                 <form method="post" style={{fontSize: "16px", fontFamily: "yekan"}}>
@@ -68,10 +81,8 @@ const Login = ()=> {
                                         <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password" className="form-control"/>
                                     </div>
 
-                                    <button onClick={handleSubmit} className="btn mt-lg-4 d-lg-block m-lg-auto col-lg-9 col-9 d-block m-auto mt-4 text-white" style={{fontFamily: "yekan", backgroundColor: "#430090"}}>ورود</button>
-
-                                    <Link to={""} className="btn mt-lg-4 d-lg-block m-lg-auto col-lg-9 col-9 d-block m-auto mt-4 text-white" style={{fontFamily: "yekan", border: "2px solid #430090"}}>فراموشی رمز عبور</Link>
-                                    <button className="btn mt-lg-4 d-lg-block m-lg-auto col-lg-9 col-9 d-block m-auto mt-4 text-white" style={{fontFamily: "yekan", border: "2px solid #430090"}}>ثبت نام کنید</button>
+                                    <button onClick={handleSubmit} className="btn mt-lg-4 d-lg-block m-lg-auto col-lg-9 col-9 d-block m-auto mt-4 text-white" style={{fontFamily: "yekan", backgroundColor: "#a04cff"}}>ورود</button>
+                                    <Link to={"/register"} className="btn mt-lg-4 d-lg-block m-lg-auto col-lg-9 col-9 d-block m-auto mt-4 text-white" style={{fontFamily: "yekan", border: "2px solid #430090"}}>ثبت نام کنید</Link>
                                     {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
                                 </form>

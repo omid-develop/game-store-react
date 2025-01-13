@@ -715,9 +715,14 @@ body{
 .box-hesab-karbari{
     width: 400px;
     min-height: 350px;
-    background-color: #0164AF;
+    background-color: #070e1c;
     margin: auto;
     border-radius: 15px;
+}
+
+
+.login-page{
+    background: linear-gradient(135deg, rgba(0, 23, 40, 0.9), rgba(7, 14, 28, 0.9));
 }
 
 
@@ -952,6 +957,11 @@ body{
     height: 250px;
     background-color: orange;
     margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-family: Sahel-Bold;
 }
 
 

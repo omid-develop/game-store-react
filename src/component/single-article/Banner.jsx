@@ -4,7 +4,11 @@ const Banner = ()=>{
 
         <>
 
-            <div className="banner-article"></div>
+            <div className="banner-article">
+
+                توضیح مقالات ما
+
+            </div>
 
         </>
 
